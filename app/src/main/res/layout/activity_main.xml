@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eduID Verifai demonstrator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/start_verifai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Start"
+        android:textColor="@color/PrimaryButtonBackgroundColor" />
+
+
+    <Button
+        android:id="@+id/start_nfc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Start NFC"
+        android:textColor="@color/PrimaryButtonBackgroundColor"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/start_liveness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Start Liveness"
+        android:textColor="@color/PrimaryButtonBackgroundColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/givennametextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voornaam"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>
