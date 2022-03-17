@@ -3,8 +3,9 @@
     <color name="colorPrimary">#0062b0</color>
     <color name="colorPrimaryDark">#152568</color>
     <color name="colorAccent">#218738</color>
-    <color name="PositiveColor">#3677C8</color>
-    <color name="PrimaryButtonBackgroundColor">#e9f2f7</color>
-    <color name="PrimaryColor">#0062b0</color>
-    <color name="AffirmativeButtonBackgroundColor">#0062b0</color>
+    <color name="VerifaiPositiveColor">#3677C8</color>
+    <color name="VerifaiPrimaryButtonBackgroundColor">#e9f2f7</color>
+    <color name="VerifaiPrimaryColor">#0062b0</color>
+    <color name="VerifaiAffirmativeButtonBackgroundColor">#0062b0</color>
+    <color name="VerifaiBottomBoxBackgroundColor">#e9f2f7</color>
 </resources>
