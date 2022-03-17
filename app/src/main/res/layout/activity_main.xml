@@ -2,25 +2,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout12"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.verifai.core.flow.views.uiComponents.buttons.VerifaiPositiveButton
-        android:id="@+id/auto_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:onClick="start"
-        android:text="@string/new_scan"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.verifai.core.flow.views.uiComponents.buttons.VerifaiPositiveButton
+            android:id="@+id/verifaiPositiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:onClick="startQRCode"
+            android:text="@string/scan_qrcode" />
+
+        <com.verifai.core.flow.views.uiComponents.buttons.VerifaiPositiveButton
+            android:id="@+id/verifaiPositiveButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:onClick="startVerifai"
+            android:text="@string/new_scan" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

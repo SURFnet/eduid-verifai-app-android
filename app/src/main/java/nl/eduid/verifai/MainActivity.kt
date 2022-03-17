@@ -40,9 +40,14 @@ class MainActivity : AppCompatActivity() {
             if (appLinkData!!.getQueryParameter("scan") == "true") {
                 token = appLinkData.getQueryParameter("token")
                 Log.i("info", "Started with token $token")
-                start(binding.root)
+                startVerifai(binding.root)
             }
         }
+    }
+
+    fun startQRCode(view: View) {
+        val intent = Intent(this, QRCode::class.java)
+        startActivity(intent)
     }
 
     /**
@@ -54,7 +59,7 @@ class MainActivity : AppCompatActivity() {
      *      an error when the licence is invalid. Please catch this error.
      */
     @Suppress("UNUSED_PARAMETER")
-    fun start(view: View) {
+    fun startVerifai(view: View) {
         val licence = BuildConfig.verifaiLicence
         Verifai.setLicence(this@MainActivity, licence)
         Verifai.configure(getVerifaiConfiguration())
