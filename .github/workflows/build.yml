@@ -22,9 +22,9 @@ jobs:
       run: |
         cp gradle.properties.dist gradle.properties
     - name: Execute Gradle build
-      run: ./gradlew build
+      run: gradlew build
     - name: Build APK
-      run: bash ./gradlew assembleDebug --stacktrace
+      run: ./gradlew assembleDebug --stacktrace
     - name: Upload APK
       uses: actions/upload-artifact@v1
       with:
