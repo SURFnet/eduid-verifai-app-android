@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="ALERT_BODY_CHOOSE_SIZE">"Wählen Sie das Format des Dokuments, das Sie scannen möchten."</string>
+    <string name="ALERT_BODY_NO_BLUETOOTH">"Bluetooth ist derzeit verfügbar. Zum Fortfahren Bluetooth einschalten und versuchen, die Verbindung wiederherzustellen."</string>
+    <string name="ALERT_BODY_NO_CARD">"Bitte halten Sie das Dokument auf der richtigen Stelle, bis die Verarbeitung fertig ist."</string>
+    <string name="ALERT_BODY_NO_INTERNET">"Überprüfen Sie Ihre Internetverbindung"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_CREDITCARD">"Kreditkartenformat"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_PASSPORT">"Reisepassformat"</string>
+    <string name="ALERT_BTN_NEGATIVE_NO_INTERNET_CANCEL">"Abbrechen"</string>
+    <string name="ALERT_BTN_PRIMARY_NO_INTERNET_RETRY">"Wiederholen"</string>
+    <string name="ALERT_TITLE_CHOOSE_SIZE">"Welches Format hat Ihr Dokument?"</string>
+    <string name="ALERT_TITLE_NO_BLUETOOTH">"Bluetooth ist nicht verfügbar"</string>
+    <string name="ALERT_TITLE_NO_CARD">"Kein Dokument ausgewählt"</string>
+    <string name="ALERT_TITLE_NO_INTERNET">"Keine Internetverbindung"</string>
+    <string name="ASSISTED_LABEL_BTN_CLOSE">"Schließen"</string>
+    <string name="ASSISTED_LABEL_BTN_ERASER">"Gummi"</string>
+    <string name="ASSISTED_LABEL_BTN_MOVE">"Versetzen"</string>
+    <string name="ASSISTED_LABEL_BTN_PAN">"Verschieben"</string>
+    <string name="ASSISTED_LABEL_BTN_PEN">"Stift"</string>
+    <string name="ASSISTED_LABEL_BTN_UNDO">"Zurücksetzen"</string>
+    <string name="BTN_ADJUST_FRAME">"Nein, Kader ändern"</string>
+    <string name="BTN_ALTERNATIVE_SCAN_METHOD">"Alternatives Scan-Verfahren"</string>
+    <string name="BTN_CANCEL">"Abbrechen"</string>
+    <string name="BTN_CHANGE">"Ändern"</string>
+    <string name="BTN_CONNECT_TO_READER">"Mit NFC-Leser verbinden"</string>
+    <string name="BTN_CONTINUE">"Weiter"</string>
+    <string name="BTN_CONTINUE_SCANNING">"Weiter scannen"</string>
+    <string name="BTN_COUNTRY_NOT_AVAIL">"Land nicht verfügbar"</string>
+    <string name="BTN_DOC_TYPE_NOT_LISTED">"Dieses Dokument ist nicht aufgeführt"</string>
+    <string name="BTN_DONE">"Fertig"</string>
+    <string name="BTN_NEXT">"Nächste"</string>
+    <string name="BTN_NO">"Nein"</string>
+    <string name="BTN_NOT_AVAILABLE_ON_DOC">"Auf diesem Dokument nicht verfügbar"</string>
+    <string name="BTN_NO_RETRY">"Nein, wiederholen"</string>
+    <string name="BTN_OK">"OK"</string>
+    <string name="BTN_RETRY">"Wiederholen"</string>
+    <string name="BTN_SCAN_DOCUMENT_MAN">"Scannen Sie das Dokument manuell"</string>
+    <string name="BTN_SCAN_ID_OTHER_COUNTRY">"Scannen Sie den Ausweis eines anderen Landes"</string>
+    <string name="BTN_SELECT">"Auswählen"</string>
+    <string name="BTN_SELECT_DOC_MAN">"Wählen Sie das Dokument manuell aus"</string>
+    <string name="BTN_SELECT_DOC_MANUAL">"Weitere Optionen"</string>
+    <string name="BTN_SKIP">"Überspringen"</string>
+    <string name="BTN_START">"Scan starten"</string>
+    <string name="BTN_UNABLE_TO_SCAN">"Scanvorgang nicht möglich"</string>
+    <string name="BTN_YES">"Ja"</string>
+    <string name="BTN_YES_CONTINUE">"Ja, weiter"</string>
+    <string name="DOCUMENT_TYPE_CAT_CIVIL">"Personenstand/Anderes offizielles Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_DRIVING_LICENSE">"Führerschein"</string>
+    <string name="DOCUMENT_TYPE_CAT_ENTRY_PAPER">"Einreiseformular"</string>
+    <string name="DOCUMENT_TYPE_CAT_IDENTITY_CARD">"Personalausweis"</string>
+    <string name="DOCUMENT_TYPE_CAT_OTHER">"Anderes Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_PASSPORT">"Reisepass"</string>
+    <string name="DOCUMENT_TYPE_CAT_PILOT">"Crewmitgliedszertifikat/Pilotenschein"</string>
+    <string name="DOCUMENT_TYPE_CAT_PLEASURE_CRAFTS">"Zertifikat für Betreiber von Sportbooten/Kapitänslizenz"</string>
+    <string name="DOCUMENT_TYPE_CAT_REPRESENTATION">"Vertretungsberechtigung für ein Unternehmen"</string>
+    <string name="DOCUMENT_TYPE_CAT_RESIDENCE">"Aufenthaltsbezogenes Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_SEAFARERS">"Ausweis für Seeleute"</string>
+    <string name="DOCUMENT_TYPE_CAT_SPECIAL">"Sonderberechtigungskarte"</string>
+    <string name="DOCUMENT_TYPE_CAT_STAMP">"Stempel"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAIN">"Zugführerschein"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL">"Reisedokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL_NON_NATIONALS">"Reisedokument für Nicht-Staatsangehörige"</string>
+    <string name="DOCUMENT_TYPE_CAT_VEHICLE_LICENSE">"Fahrzeugschein"</string>
+    <string name="DOCUMENT_TYPE_CAT_VISA">"Visa"</string>
+    <string name="DOCUMENT_TYPE_CAT_WORK_PERMIT">"Arbeitsgenehmigung"</string>
+    <string name="DOCUMENT_TYPE_KIND_BIRTH">"Geburt"</string>
+    <string name="DOCUMENT_TYPE_KIND_DEATH_CERTIFICATE">"Sterbeurkunde"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIPLOMATIC">"Diplomatisch"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIVORCE">"Scheidung"</string>
+    <string name="DOCUMENT_TYPE_KIND_ENTRY_STAMP">"Eingangsstempel"</string>
+    <string name="DOCUMENT_TYPE_KIND_EXIT_STAMP">"Austrittsstempel"</string>
+    <string name="DOCUMENT_TYPE_KIND_MARRIAGE">"Ehe"</string>
+    <string name="DOCUMENT_TYPE_KIND_MILITARY">"Militär"</string>
+    <string name="DOCUMENT_TYPE_KIND_NATIONALITY">"Nationalität/Staatsbürgerschaft"</string>
+    <string name="DOCUMENT_TYPE_KIND_ORDINARY">"Gewöhnlich"</string>
+    <string name="DOCUMENT_TYPE_KIND_RELATED">"Zugehöriges/Verwandtes Dokument"</string>
+    <string name="DOCUMENT_TYPE_KIND_SERVICE">"Dienst/Behörde"</string>
+    <string name="DOCUMENT_TYPE_KIND_SOCIAL_SECURITY_CARD">"Sozialversicherungsausweis/Steuerkarte"</string>
+    <string name="DOCUMENT_TYPE_KIND_TEMPORARY">"Temporär/Vorläufig/Notfall"</string>
+    <string name="DRIVING_LICENCE">"Führerschein"</string>
+    <string name="EMERGENCY_PASSPORT">"Reiseausweis als Passersatz"</string>
+    <string name="GENERIC_CLOSE">"Schließen"</string>
+    <string name="GENERIC_ERROR">"Fehler"</string>
+    <string name="GENERIC_ERROR_TEXT">"Etwas ist schief gegangen. Versuchen Sie es noch einmal oder kontaktieren Sie uns."</string>
+    <string name="GENERIC_QUIT">"Beenden"</string>
+    <string name="GENERIC_RESTART">"Erneut starten"</string>
+    <string name="ID_CARD">"Ausweis"</string>
+    <string name="OTHER_DOCUMENT">"Anderes"</string>
+    <string name="PASSPORT">"Reisepass"</string>
+    <string name="PICTURE_PROCESSING_LABEL">"Verarbeitung läuft…"</string>
+    <string name="REF_TRAVEL_DOC">"Reiseausweis für Flüchtlinge"</string>
+    <string name="RESIDENCE_PERMIT">"Aufenthaltsgenehmigung"</string>
+    <string name="RESIDENCE_PERMIT_II_IV">"Aufenthaltsgenehmigung Typ II/IV"</string>
+    <string name="RESIDENCE_PERMIT_I_III_EU">"Aufenthaltsgenehmigung Typ I/III/EU"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_BUTTON">"Scananweisungen anzeigen"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_COPY">"Sorgen Sie, dass der Code auf dem Identitätsnachweis völlig sichtbar ist. Vermeiden Sie Blendungen auf dem Dokument. "</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_TITLE">"Hilfe beim Scannen"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_NO_DOC_FOUND">"Kein Dokument gefunden"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCANNING">"Scannen…"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_BACK">"Machen Sie ein Foto der Rückseite"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_FRONT">"Machen Sie ein Foto der Vorderseite"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_MRZ">"Scannen Sie den Code, der so aussieht:"</string>
+    <string name="SCREEN_A_HINT_MRZ_IN_BOX">"Platzieren Sie den Code im markierten Teil des Vierecks"</string>
+    <string name="SCREEN_A_HINT_SCAN_BACK">"Scannen Sie die Rückseite Ihres Dokuments"</string>
+    <string name="SCREEN_A_HINT_SCAN_DOC_FROM_COUNTRY">"Scannen Sie ein Dokument aus: %s"</string>
+    <string name="SCREEN_A_HINT_SCAN_FRONT">"Scannen Sie die Vorderseite Ihres Dokuments"</string>
+    <string name="SCREEN_A_HINT_TURN_OVER">"Drehen Sie die Karte um"</string>
+    <string name="SCREEN_A_INIT_TEXT">"Initialisieren…"</string>
+    <string name="SCREEN_A_LOADING_TEXT">"Dokumentenscanner vorbereiten"</string>
+    <string name="SCREEN_A_NAV_TITLE">"Scannen Sie Ihr Ausweis"</string>
+    <string name="SCREEN_A_STATE_SCANNING">"Scannen…"</string>
+    <string name="SCREEN_A_STATE_SCANNING_PAUSED">"Scannen pausiert"</string>
+    <string name="SCREEN_A_STATE_TURN_OVER">"Dokument umdrehen"</string>
+    <string name="SCREEN_A_STATE_WRONG_DOCUMENT">"Falsches Dokument"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_BLOCK_HINT">"Passen Sie den Rahmen an"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_CROPPING">"Ist der Rahmen so positioniert, dass er mit den Ecken des Dokuments übereinstimmt?"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_READABLE">"Ist alles klar und gut lesbar?"</string>
+    <string name="SCREEN_C_HINT_SCAN_RESULT_CROP">"Schleifen Sie die Ecken des Kaders zu den richtigen Positionen"</string>
+    <string name="SCREEN_C_NAV_TITLE">"Überprüfen Sie das Ergebnis"</string>
+    <string name="SCREEN_D_E_NAV_TITLE_COUNTRY">"Schritt 1: Land auswählen"</string>
+    <string name="SCREEN_D_E_SEARCH_NO_RESULT">"Keine Ergebnisse für \"%s\""</string>
+    <string name="SCREEN_D_E_SEARCH_PLACEHOLDER">"Suchen"</string>
+    <string name="SCREEN_D_HEADING_ALL_COUNTRIES">"Alle Länder"</string>
+    <string name="SCREEN_D_HEADING_SUGGESTED_COUNTRY">"Vorgeschlagenes Land"</string>
+    <string name="SCREEN_E_J_LABEL_SAMPLE_DOC">"Beispielsdokument"</string>
+    <string name="SCREEN_E_NAV_TITLE_DOC_TYPE">"Schritt 2: Dokumentenart wählen"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_CHECK">"Überprüfen Sie das Ergebnis"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_PROTECT_HINT">"Schützen Sie sensible Daten"</string>
+    <string name="SCREEN_F_G_HINT_SENSITIVE_DATA">"Markieren Sie sensible Daten"</string>
+    <string name="SCREEN_F_G_NAV_TITLE">"Schwärzen Sie persönliche Daten"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_MRZ_READ_FAIL">"Der Code konnte nicht gelesen werden"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_NOT_VALID">"Dieses Dokument ist ungültig"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_INSTRUCTIONS">"Stellen Sie sicher, dass der Code nicht von Ihren Fingern oder Dreck bedeckt wird\n\nProbieren Sie Glanz um den Code herum zu vermeiden"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_NOT_VALID_INSTRUCTIONS">"Das von Ihnen gescannte Dokument steht nicht auf der Liste der erlaubten Dokumente\n\nBenutzen Sie bitte ein anderes Dokument"</string>
+    <string name="SCREEN_H_NAV_TITLE">"Der Code ist nicht lesbar"</string>
+    <string name="SCREEN_H_NAV_TITLE_NOT_VALID">"Dokument ist ungültig"</string>
+    <string name="SCREEN_J_BOTTOM_STATE_DOC_TYPE">"Wählen Sie das Beispieldokument aus, das Ihrem Dokument am ähnlichsten sieht"</string>
+    <string name="SCREEN_J_INSTR_INSTRUCTIONS">"In der Liste sehen Sie einige staatlich ausgestellte Musterdokumente. Bitte wählen Sie anhand des Aussehens das Dokument aus, das Ihrem Dokument am ähnlichsten ist.\n\nEs ist möglich, dass sich mehrere Dokumente nicht voneinander unterscheiden lassen. Schauen Sie sich in diesem Fall die Beschriftungen unter den Beispieldokumenten genau an und wählen Sie das am besten geeignete Dokument aus."</string>
+    <string name="SCREEN_J_INSTR_NAV_TITLE">"Hilfe bei der Dokumentenauswahl"</string>
+    <string name="SCREEN_J_NAV_TITLE">"Selektieren Sie ein Dokument"</string>
+    <string name="SCREEN_K_ACTIONSHEET_COMPLETE">"Lesen vollendet, Daten werden geladen…"</string>
+    <string name="SCREEN_K_ACTIONSHEET_HOLD_INSTRUCTION">"Halten Sie das Dokument gegen die Rückseite des Handys und bewegen Sie es langsam bis das Handy vibriert"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Halten Sie das Dokument gegen die Rückseite des Handys und bewegen Sie es langsam bis das Handy vibriert"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Halten Sie das Dokument gegen die Rückseite des Handys und bewegen Sie es langsam bis das Handy vibriert"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_ANDROID">"Warten Sie, bis alle Daten auf dem Chip ausgelesen sind. Dies kann einige Sekunden dauern. "</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_IOS">"Warten Sie, bis alle Daten ausgelesen sind. Dies kann bis zu 30 Sekunden dauern."</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECTING">"Verbinden…"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECT_TO_READER">"Mit dem Bluetooth NFC-Leser verbinden"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_ANDROID">"Halten Sie den Ausweis oder Reisepass gegen die Rückseite des Handys"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_IOS">"Halten Sie den Ausweis oder Reisepass gegen die Rückseite des Handys"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_LOST">"Verbindung mit dem Dokument ist abgebrochen"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_READING">"Chip lesen…"</string>
+    <string name="SCREEN_K_HINT_HOLD_STEADY">"Halten Sie das Dokument still"</string>
+    <string name="SCREEN_K_NAV_TITLE">"NFC scannen"</string>
+    <string name="SCREEN_L_BOTTOM_BODY_SPEECH_WORDS">"Apfel Banane Pizza"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_CLOSE_EYES">"Schließen Sie Ihre Augen für %f Sekunden"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_LEFT">"Neigen Sie Ihren Kopf nach links"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_RIGHT">"Neigen Sie Ihren Kopf nach rechts"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_SELFIE">"Machen Sie ein Foto vom Gesicht"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_SPEECH">"Sagen Sie diese Wörter"</string>
+    <string name="SCREEN_L_NAV_TITLE">"Liveness check"</string>
+    <string name="SCREEN_L_RECORDING_WAIT">"Aufnehmen… Bitte warten"</string>
+    <string name="SCREEN_O1_HEADER">"Verfügt Ihr Dokument über einen maschinenlesbaren Bereich (MRZ)?\n\nEin MRZ sieht so aus:"</string>
+    <string name="SCREEN_O2_HEADER">"Machen Sie ein Bild von Ihrem Dokument"</string>
+    <string name="SCREEN_O2_INSTRUCTION_LABEL">"Scannen Sie die Seite des Dokuments, auf der sich ein solcher Code befindet:"</string>
+    <string name="SCREEN_O2_O5_SCAN_INSTRUCTIONS">"Stellen Sie sicher, dass:\n- sich das Dokument im Rahmen befindet.\n- der Raum gut beleuchtet ist.\n- der Ausweis nicht glänzt."</string>
+    <string name="SCREEN_O3_1_HEADER">"Legen Sie das Handy auf den Reisepass"</string>
+    <string name="SCREEN_O3_1_SCAN_INSTRUCTIONS">"Um den Chip im Reisepass auszulesen:\n1. Legen Sie das Handy auf den Reisepass\n2. Bewegen Sie den Reisepass langsam, bis das Auslesen beginnt. Dann halten Sie den Reisepass still"</string>
+    <string name="SCREEN_O3_2_HEADER">"Legen Sie das Handy auf den Ausweis"</string>
+    <string name="SCREEN_O3_2_SCAN_INSTRUCTIONS">"Um den Chip im Ausweis auszulesen:\n1. Legen Sie das Handy auf den Ausweis\n2. Bewegen Sie den Ausweis langsam, bis das Auslesen beginnt. Dann halten Sie den Ausweis still"</string>
+    <string name="SCREEN_O5_INSTRUCTION_LABEL">"Halten Sie den Ausweis vor der Kamera. Ein Bild wird automatisch aufgenommen, sobald das Dokument erkannt wird."</string>
+    <string name="UNKNOWN_DOCUMENT">"Unbekanntes Dokument"</string>
+    <string name="VISA">"Visa"</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Zur Startseite"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Nach oben"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Weitere Optionen"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Fertig"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Alle anzeigen"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"App auswählen"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"AUS"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"AN"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Strg +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Löschen"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Eingabetaste"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Funktionstaste +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta-Taste +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Umschalttaste +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"Leertaste"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym-Taste +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menütaste +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Suchen…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Suchanfrage löschen"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Suchanfrage"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Suche"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Anfrage senden"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Sprachsuche"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Teilen mit"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Mit <ns1:g id="APPLICATION_NAME">%s</ns1:g> teilen"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Minimieren"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Navigationsmenü schließen"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Tabelle schließen"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktivieren"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> funktioniert erst nach der Aktivierung der Google Play-Dienste."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-Dienste aktivieren"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installieren"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind die Google Play-Dienste erforderlich, die auf deinem Gerät nicht installiert sind."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-Dienste installieren"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Verfügbarkeit von Google Play-Diensten"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fehler bei Zugriff auf Google Play-Dienste"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> hat Probleme mit Google Play-Diensten. Bitte versuche es noch einmal."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die auf deinem Gerät nicht unterstützt werden."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Aktualisieren"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> wird nur ausgeführt, wenn du die Google Play-Dienste aktualisierst."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-Dienste aktualisieren"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die gerade aktualisiert werden."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Eine neue Version der Google Play-Dienste wird benötigt. Diese wird in Kürze automatisch aktualisiert."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Auf Smartphone öffnen"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Anmelden"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Über Google anmelden"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ungültige Eingabe"</string>
+    <string msgid="6827826412747255547" name="in_progress">"In Bearbeitung"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Häkchen weder gesetzt noch entfernt"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigationsmenü"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Nicht ausgewählt"</string>
+    <string msgid="875452955155264703" name="off">"Aus"</string>
+    <string msgid="8655164131929253426" name="on">"An"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Suche"</string>
+    <string msgid="6043586758067023" name="selected">"Ausgewählt"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Tab"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> Prozent."</string>
+</resources>

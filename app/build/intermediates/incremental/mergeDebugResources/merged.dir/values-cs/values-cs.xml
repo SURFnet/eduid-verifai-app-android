@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="ALERT_BODY_CHOOSE_SIZE">"Zvolte velikost dokladu, který chcete naskenovat."</string>
+    <string name="ALERT_BODY_NO_BLUETOOTH">"Bluetooth právě není k dispozici. Chcete-li pokračovat, zapněte Bluetooth a zkuste se připojit znovu."</string>
+    <string name="ALERT_BODY_NO_CARD">"Ponechte doklad na místě až do ukončení zpracování."</string>
+    <string name="ALERT_BODY_NO_INTERNET">"Zkontrolujte připojení k internetu."</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_CREDITCARD">"Velikost kreditní karty"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_PASSPORT">"Cestovní pas"</string>
+    <string name="ALERT_BTN_NEGATIVE_NO_INTERNET_CANCEL">"Zrušit"</string>
+    <string name="ALERT_BTN_PRIMARY_NO_INTERNET_RETRY">"Opakovat"</string>
+    <string name="ALERT_TITLE_CHOOSE_SIZE">"Jakou má váš doklad velikost?"</string>
+    <string name="ALERT_TITLE_NO_BLUETOOTH">"Bluetooth není k dispozici"</string>
+    <string name="ALERT_TITLE_NO_CARD">"Nebyl zjištěn žádný doklad"</string>
+    <string name="ALERT_TITLE_NO_INTERNET">"Žádné připojení k internetu"</string>
+    <string name="ASSISTED_LABEL_BTN_CLOSE">"Zavřít"</string>
+    <string name="ASSISTED_LABEL_BTN_ERASER">"Guma"</string>
+    <string name="ASSISTED_LABEL_BTN_MOVE">"Posunout"</string>
+    <string name="ASSISTED_LABEL_BTN_PAN">"Otočit"</string>
+    <string name="ASSISTED_LABEL_BTN_PEN">"Pero"</string>
+    <string name="ASSISTED_LABEL_BTN_UNDO">"Zpět"</string>
+    <string name="BTN_ADJUST_FRAME">"Ne, nastavit rámeček"</string>
+    <string name="BTN_ALTERNATIVE_SCAN_METHOD">"Alternativní metoda skenování"</string>
+    <string name="BTN_CANCEL">"Zrušit"</string>
+    <string name="BTN_CHANGE">"Změnit"</string>
+    <string name="BTN_CONNECT_TO_READER">"Připojení ke čtečce NFC"</string>
+    <string name="BTN_CONTINUE">"Pokračovat"</string>
+    <string name="BTN_CONTINUE_SCANNING">"Pokračovat ve skenování"</string>
+    <string name="BTN_COUNTRY_NOT_AVAIL">"Země není k dispozici"</string>
+    <string name="BTN_DOC_TYPE_NOT_LISTED">"Doklad není uveden"</string>
+    <string name="BTN_DONE">"Hotovo"</string>
+    <string name="BTN_NEXT">"Další"</string>
+    <string name="BTN_NO">"Ne"</string>
+    <string name="BTN_NOT_AVAILABLE_ON_DOC">"Při tomto dokladu není k dispozici"</string>
+    <string name="BTN_NO_RETRY">"Ne, zkusit znovu"</string>
+    <string name="BTN_OK">"OK"</string>
+    <string name="BTN_RETRY">"Opakovat"</string>
+    <string name="BTN_SCAN_DOCUMENT_MAN">"Ruční skenování dokladu"</string>
+    <string name="BTN_SCAN_ID_OTHER_COUNTRY">"Skenování průkazu totožnosti z jiné země"</string>
+    <string name="BTN_SELECT">"Výběr"</string>
+    <string name="BTN_SELECT_DOC_MANUAL">"Další možnosti"</string>
+    <string name="BTN_START">"START"</string>
+    <string name="BTN_UNABLE_TO_SCAN">"Nemohu skenovat"</string>
+    <string name="BTN_YES">"Ano"</string>
+    <string name="BTN_YES_CONTINUE">"Ano, pokračovat"</string>
+    <string name="DOCUMENT_TYPE_CAT_CIVIL">"Občanský stav/jiný úřední doklad"</string>
+    <string name="DOCUMENT_TYPE_CAT_DRIVING_LICENSE">"Řidičský průkaz"</string>
+    <string name="DOCUMENT_TYPE_CAT_ENTRY_PAPER">"Vstupní papír"</string>
+    <string name="DOCUMENT_TYPE_CAT_IDENTITY_CARD">"Občanský průkaz"</string>
+    <string name="DOCUMENT_TYPE_CAT_OTHER">"Jiný doklad"</string>
+    <string name="DOCUMENT_TYPE_CAT_PASSPORT">"Cestovní pas"</string>
+    <string name="DOCUMENT_TYPE_CAT_PILOT">"Osvědčení člena posádky/pilotní průkaz"</string>
+    <string name="DOCUMENT_TYPE_CAT_PLEASURE_CRAFTS">"Osvědčení pro provozovatele rekreačních plavidel/kapitánský průkaz"</string>
+    <string name="DOCUMENT_TYPE_CAT_REPRESENTATION">"Oprávnění zastupovat společnost"</string>
+    <string name="DOCUMENT_TYPE_CAT_RESIDENCE">"Dokument související s pobytem"</string>
+    <string name="DOCUMENT_TYPE_CAT_SEAFARERS">"Doklad totožnosti námořníků"</string>
+    <string name="DOCUMENT_TYPE_CAT_SPECIAL">"Zvláštní autorizační průkaz"</string>
+    <string name="DOCUMENT_TYPE_CAT_STAMP">"Razítko"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAIN">"Řidičský průkaz pro strojvedoucího"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL">"Cestovní doklad"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL_NON_NATIONALS">"Cestovní doklady vydávané cizím státním příslušníkům"</string>
+    <string name="DOCUMENT_TYPE_CAT_VEHICLE_LICENSE">"Osvědčení o registraci vozidla/Kniha jízd"</string>
+    <string name="DOCUMENT_TYPE_CAT_VISA">"Víza"</string>
+    <string name="DOCUMENT_TYPE_CAT_WORK_PERMIT">"Pracovní povolení"</string>
+    <string name="DOCUMENT_TYPE_KIND_BIRTH">"Rodný"</string>
+    <string name="DOCUMENT_TYPE_KIND_DEATH_CERTIFICATE">"Úmrtní list"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIPLOMATIC">"Diplomatický"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIVORCE">"Rozvodový"</string>
+    <string name="DOCUMENT_TYPE_KIND_ENTRY_STAMP">"Razítko vstupu"</string>
+    <string name="DOCUMENT_TYPE_KIND_EXIT_STAMP">"Razítko výstupu"</string>
+    <string name="DOCUMENT_TYPE_KIND_MARRIAGE">"Manželský"</string>
+    <string name="DOCUMENT_TYPE_KIND_MILITARY">"Vojenský"</string>
+    <string name="DOCUMENT_TYPE_KIND_NATIONALITY">"Státní příslušnost/občanství"</string>
+    <string name="DOCUMENT_TYPE_KIND_ORDINARY">"Obyčejný"</string>
+    <string name="DOCUMENT_TYPE_KIND_RELATED">"Související/přidružený doklad"</string>
+    <string name="DOCUMENT_TYPE_KIND_SERVICE">"Služební/úřední"</string>
+    <string name="DOCUMENT_TYPE_KIND_SOCIAL_SECURITY_CARD">"Karta sociálního zabezpečení/daňová karta"</string>
+    <string name="DOCUMENT_TYPE_KIND_TEMPORARY">"Dočasné/Provizorní/Náhradní"</string>
+    <string name="DRIVING_LICENCE">"Řidičský průkaz"</string>
+    <string name="EMERGENCY_PASSPORT">"Náhradní cestovní pas"</string>
+    <string name="GENERIC_CLOSE">"Zavřít"</string>
+    <string name="GENERIC_ERROR">"Chyba"</string>
+    <string name="GENERIC_ERROR_TEXT">"Něco se pokazilo. Zkuste to znovu, nebo nás kontaktujte"</string>
+    <string name="GENERIC_QUIT">"Ukončit"</string>
+    <string name="GENERIC_RESTART">"Začít znovu"</string>
+    <string name="ID_CARD">"Občanský průkaz"</string>
+    <string name="OTHER_DOCUMENT">"Jiné"</string>
+    <string name="PASSPORT">"Cestovní pas"</string>
+    <string name="PICTURE_PROCESSING_LABEL">"Zpracovává se…"</string>
+    <string name="REF_TRAVEL_DOC">"Cestovní doklad pro azylanty"</string>
+    <string name="RESIDENCE_PERMIT">"Povolení k pobytu"</string>
+    <string name="RESIDENCE_PERMIT_II_IV">"Povolení k pobytu typu II/IV"</string>
+    <string name="RESIDENCE_PERMIT_I_III_EU">"Povolení k pobytu typu I/III/EU"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_BUTTON">"Zobrazit pokyny ke skenování"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_COPY">"Zajistěte, aby byl kód zcela viditelný. Snažte se vyhnout odleskům."</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_TITLE">"Jak naskenovat průkaz totožnosti"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_NO_DOC_FOUND">"Nebyl nalezen žádný doklad"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCANNING">"Skenování…"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_BACK">"Vyfoťte zadní stranu"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_FRONT">"Vyfoťte přední stranu"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_MRZ">"Naskenujte kód, který vypadá takto:"</string>
+    <string name="SCREEN_A_HINT_MRZ_IN_BOX">"Umístěte kód do zvýrazněné oblasti rámečku"</string>
+    <string name="SCREEN_A_HINT_SCAN_BACK">"Naskenujte zadní stranu dokladu"</string>
+    <string name="SCREEN_A_HINT_SCAN_DOC_FROM_COUNTRY">"Skenování dokladu z: %s"</string>
+    <string name="SCREEN_A_HINT_SCAN_FRONT">"Naskenujte přední stranu dokladu"</string>
+    <string name="SCREEN_A_HINT_TURN_OVER">"Otočte průkaz na druhou stranu"</string>
+    <string name="SCREEN_A_INIT_TEXT">"Inicializace…"</string>
+    <string name="SCREEN_A_LOADING_TEXT">"Příprava skeneru dokladu"</string>
+    <string name="SCREEN_A_NAV_TITLE">"Naskenujte průkaz totožnosti"</string>
+    <string name="SCREEN_A_STATE_SCANNING">"Skenování…"</string>
+    <string name="SCREEN_A_STATE_SCANNING_PAUSED">"Skenování pozastaveno"</string>
+    <string name="SCREEN_A_STATE_TURN_OVER">"Doklad otočte"</string>
+    <string name="SCREEN_A_STATE_WRONG_DOCUMENT">"Nesprávný doklad"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_BLOCK_HINT">"Nastavení rámečku"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_CROPPING">"Je rámeček umístěn tak, aby odpovídal rohům dokladu?"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_READABLE">"Je vše jasně čitelné?"</string>
+    <string name="SCREEN_C_HINT_SCAN_RESULT_CROP">"Přetažením rohů do správné polohy upravte rámeček"</string>
+    <string name="SCREEN_C_NAV_TITLE">"Zkontrolovat výsledek"</string>
+    <string name="SCREEN_D_E_NAV_TITLE_COUNTRY">"Krok 1: Výběr země"</string>
+    <string name="SCREEN_D_E_SEARCH_NO_RESULT">"Žádné výsledky pro \"%s\""</string>
+    <string name="SCREEN_D_E_SEARCH_PLACEHOLDER">"Vyhledávání"</string>
+    <string name="SCREEN_D_HEADING_ALL_COUNTRIES">"Všechny země"</string>
+    <string name="SCREEN_D_HEADING_SUGGESTED_COUNTRY">"Navrhovaná země"</string>
+    <string name="SCREEN_E_J_LABEL_SAMPLE_DOC">"vzorový doklad"</string>
+    <string name="SCREEN_E_NAV_TITLE_DOC_TYPE">"Krok 2: Výběr typu dokladu"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_CHECK">"Zkontrolovat výsledek"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_PROTECT_HINT">"Ochrana citlivých údajů"</string>
+    <string name="SCREEN_F_G_HINT_SENSITIVE_DATA">"Přeškrtněte všechny citlivé údaje"</string>
+    <string name="SCREEN_F_G_NAV_TITLE">"Skrýt osobní údaje"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_MRZ_READ_FAIL">"Čtení kódu bylo neúspěšné"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_NOT_VALID">"Tento doklad není platný"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_INSTRUCTIONS">"Ujistěte se, že kód není zakrytý prsty nebo nečistotami\n\nZkontrolujte, zda nedochází k přílišnému oslnění"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_NOT_VALID_INSTRUCTIONS">"Naskenovaný doklad není na seznamu podporovaných dokladů\n\nPoužijte jiný doklad"</string>
+    <string name="SCREEN_H_NAV_TITLE">"Kód se nepodařilo přečíst"</string>
+    <string name="SCREEN_H_NAV_TITLE_NOT_VALID">"Doklad není platný"</string>
+    <string name="SCREEN_J_BOTTOM_STATE_DOC_TYPE">"Vyberte vzorový doklad, který se vašemu dokladu nejvíce podobá"</string>
+    <string name="SCREEN_J_INSTR_INSTRUCTIONS">"Na seznamu najdete několik vzorových dokladů vydaných orgány státní správy. Podle vzhledu vyberte ten doklad, který se vašemu dokladu podobá nejvíce.\n\nJe možné, že některé doklady od jiných nelze odlišit. V takovém případě se pozorně podívejte na popisky pod vzorovými doklady a vyberte ten nejvhodnější."</string>
+    <string name="SCREEN_J_INSTR_NAV_TITLE">"Nápověda pro výběr dokladu"</string>
+    <string name="SCREEN_J_NAV_TITLE">"Výběr dokladu"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Průkaz přiložte a podržte na zadní straně telefonu a pomalu jím pohybujte, dokud telefon nezavibruje"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Průkaz přiložte a podržte na zadní straně telefonu a pomalu jím pohybujte, dokud telefon nezavibruje"</string>
+    <string name="SCREEN_K_ACTIONSHEET_COMPLETE">"Čtení dokončeno, načítání dat…"</string>
+    <string name="SCREEN_K_ACTIONSHEET_HOLD_INSTRUCTION">"Průkaz nebo pas přiložte a podržte na zadní straně telefonu a pomalu jím pohybujte, dokud telefon nezavibruje"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Cestovní pas přiložte a podržte na zadní straně telefonu a pomalu jím pohybujte, dokud telefon nezavibruje"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Cestovní pas přiložte a podržte na zadní straně telefonu a pomalu jím pohybujte, dokud telefon nezavibruje"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_ANDROID">"Počkejte, dokud nebudou načtena všechna data na čipu. To může trvat několik sekund."</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_IOS">"Počkejte, dokud nebudou načtena všechna data na čipu. To může trvat až 30 sekund."</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECTING">"Připojování…"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECT_TO_READER">"Připojení k Bluetooth čtečce NFC"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_ANDROID">"Umístěte a nechte doklad na telefonu"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_IOS">"Umístěte a nechte doklad na čtečce"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_LOST">"Ztráta spojení s dokladem"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_READING">"Čtení čipu…"</string>
+    <string name="SCREEN_K_HINT_HOLD_STEADY">"Držte stabilně"</string>
+    <string name="SCREEN_K_NAV_TITLE">"Skenování NFC"</string>
+    <string name="SCREEN_O1_HEADER">"Má váš doklad strojově čitelnou oblast?\n\nTa vypadá takto:"</string>
+    <string name="SCREEN_O2_HEADER">"Doklad vyfoťte"</string>
+    <string name="SCREEN_O2_INSTRUCTION_LABEL">"Vyfoťte stranu dokladu s takovýmto kódem:"</string>
+    <string name="SCREEN_O2_O5_SCAN_INSTRUCTIONS">"Ujistěte se, že:\n -Celý dokument je uvnitř rámečku.\n -Místnost je dobře osvětlená.\n -Doklad není oslněn."</string>
+    <string name="SCREEN_O3_1_HEADER">"Telefon přiložte k cestovnímu pasu"</string>
+    <string name="SCREEN_O3_1_SCAN_INSTRUCTIONS">"Skenování čipu na dokladu:\n\n1. Připravte si doklad.\n\n2. Stiskněte tlačítko Start.\n\n3. Horní zadní část telefonu přiložte k pasu, dokud neucítíte vibrování.\n\n4. Poté držte stabilně a počkejte, až se ukazatel průběhu dokončí."</string>
+    <string name="SCREEN_O3_2_HEADER">"Telefon přiložte k průkazu"</string>
+    <string name="SCREEN_O3_2_SCAN_INSTRUCTIONS">"Skenování čipu na dokladu:\n\n1. Připravte si doklad.\n\n2. Stiskněte tlačítko Start.\n\n3. Horní zadní část telefonu přiložte na průkaz, dokud neucítíte vibrování.\n\n4. Poté držte stabilně a počkejte, až se ukazatel průběhu dokončí."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_INSTRUCTIONS">"Pro úspěšné naskenování čipu na dokladu:\n\n- Telefon přikládejte k dokladu až po obdržení pokynů.\n\n- Po obdržení pokynů položte zadní stranu telefonu na doklad.\n\n- Dokladem opatrně pohybujte, dokud neucítíte vibrování. Poté jej držte stabilně.\n\n- Pokud se to nepodaří, zkuste zařízení od dokladu zvednout a vyzkoušejte to znovu."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_TITLE">"Skenování neúspěšné"</string>
+    <string name="SCREEN_O5_INSTRUCTION_LABEL">"Umístěte doklad před fotoaparát. Po rozpoznání dokladu se automaticky pořídí snímek."</string>
+    <string name="UNKNOWN_DOCUMENT">"Neznámý doklad"</string>
+    <string name="VISA">"Víza"</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Přejít na plochu"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Přejít nahoru"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Další možnosti"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Hotovo"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Zobrazit vše"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Vybrat aplikaci"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"VYP"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ZAP"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"mezerník"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Vyhledat…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Smazat dotaz"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Dotaz pro vyhledávání"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Hledat"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Odeslat dotaz"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Hlasové vyhledávání"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Sdílet s"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Sdílet s aplikací <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Sbalit"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Zavřít navigační panel"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Zavřít sešit"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Povolit"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> je třeba aktivovat služby Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Aktivace služeb Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instalovat"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> jsou potřeba služby Google Play, které v zařízení nemáte."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Instalace služeb Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Dostupnost služeb Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Chyba služeb Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> má potíže se službami Google Play. Zkuste to prosím znovu."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> jsou potřeba služby Google Play, které v tomto zařízení nejsou podporovány."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Aktualizovat"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> je třeba aktualizovat služby Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Aktualizace služeb Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> jsou potřeba služby Google Play, které jsou právě aktualizovány."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Je vyžadována nová verze služeb Google Play. Nová verze se brzy sama nainstaluje."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Otevřít v telefonu"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Přihlásit se"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Přihlásit se k účtu Google"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Neplatný údaj"</string>
+    <string msgid="6827826412747255547" name="in_progress">"Probíhá"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Ani zaškrtnuto, ani nezaškrtnuto"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigační nabídka"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Nevybráno"</string>
+    <string msgid="875452955155264703" name="off">"Vyp"</string>
+    <string msgid="8655164131929253426" name="on">"Zap"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Hledat"</string>
+    <string msgid="6043586758067023" name="selected">"Vybráno"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Karta"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+</resources>

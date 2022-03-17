@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="ALERT_BODY_CHOOSE_SIZE">"Velg størrelsen på dokumentet du vil skanne."</string>
+    <string name="ALERT_BODY_NO_BLUETOOTH">"Bluetooth er for øyeblikket utilgjengelig. Slå på Bluetooth for å fortsette, og prøv å koble til på nytt."</string>
+    <string name="ALERT_BODY_NO_CARD">"Hold dokumentet på plass til behandlingen er fullført."</string>
+    <string name="ALERT_BODY_NO_INTERNET">"Kontroller internettforbindelsen din."</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_CREDITCARD">"Størrelse på kredittkort"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_PASSPORT">"Pass"</string>
+    <string name="ALERT_BTN_NEGATIVE_NO_INTERNET_CANCEL">"Avbryt"</string>
+    <string name="ALERT_BTN_PRIMARY_NO_INTERNET_RETRY">"Prøv igjen"</string>
+    <string name="ALERT_TITLE_CHOOSE_SIZE">"Hvilken størrelse har dokumentet?"</string>
+    <string name="ALERT_TITLE_NO_BLUETOOTH">"Bluetooth er ikke tilgjengelig"</string>
+    <string name="ALERT_TITLE_NO_CARD">"Inget dokument oppdaget"</string>
+    <string name="ALERT_TITLE_NO_INTERNET">"Ingen Internett-tilkobling"</string>
+    <string name="ASSISTED_LABEL_BTN_CLOSE">"Lukk"</string>
+    <string name="ASSISTED_LABEL_BTN_ERASER">"Viskelær"</string>
+    <string name="ASSISTED_LABEL_BTN_MOVE">"Flytt"</string>
+    <string name="ASSISTED_LABEL_BTN_PAN">"Panorer"</string>
+    <string name="ASSISTED_LABEL_BTN_PEN">"Penn"</string>
+    <string name="ASSISTED_LABEL_BTN_UNDO">"Angre"</string>
+    <string name="BTN_ADJUST_FRAME">"Nei, juster ramme"</string>
+    <string name="BTN_ALTERNATIVE_SCAN_METHOD">"Alternativ skannemetode"</string>
+    <string name="BTN_CANCEL">"Kanseller"</string>
+    <string name="BTN_CHANGE">"Endre"</string>
+    <string name="BTN_CONNECT_TO_READER">"Koble til NFC-Leser"</string>
+    <string name="BTN_CONTINUE">"Fortsett"</string>
+    <string name="BTN_CONTINUE_SCANNING">"Fortsett skanningen"</string>
+    <string name="BTN_COUNTRY_NOT_AVAIL">"Land ikke tilgjengelig"</string>
+    <string name="BTN_DOC_TYPE_NOT_LISTED">"Dokumentet er ikke oppført"</string>
+    <string name="BTN_DONE">"Ferdig"</string>
+    <string name="BTN_NEXT">"Neste"</string>
+    <string name="BTN_NO">"Nei"</string>
+    <string name="BTN_NOT_AVAILABLE_ON_DOC">"Ikke tilgjengelig for dette dokumentet"</string>
+    <string name="BTN_NO_RETRY">"Nei, prøv på nytt"</string>
+    <string name="BTN_OK">"OK"</string>
+    <string name="BTN_RETRY">"Prøv igjen"</string>
+    <string name="BTN_SCAN_DOCUMENT_MAN">"Skanne dokumentet manuelt"</string>
+    <string name="BTN_SCAN_ID_OTHER_COUNTRY">"Skann ID fra et annet land"</string>
+    <string name="BTN_SELECT">"Velg"</string>
+    <string name="BTN_SELECT_DOC_MANUAL">"Andre alternativer"</string>
+    <string name="BTN_START">"START"</string>
+    <string name="BTN_UNABLE_TO_SCAN">"Jeg kan ikke skanne"</string>
+    <string name="BTN_YES">"Ja"</string>
+    <string name="BTN_YES_CONTINUE">"Ja, fortsett"</string>
+    <string name="DOCUMENT_TYPE_CAT_CIVIL">"Sivilstatus/Annet Offisielt Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_DRIVING_LICENSE">"Førerkort"</string>
+    <string name="DOCUMENT_TYPE_CAT_ENTRY_PAPER">"Papir for innsreise"</string>
+    <string name="DOCUMENT_TYPE_CAT_IDENTITY_CARD">"Identitetskort"</string>
+    <string name="DOCUMENT_TYPE_CAT_OTHER">"Annet Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_PASSPORT">"Pass"</string>
+    <string name="DOCUMENT_TYPE_CAT_PILOT">"Mannskapsmedlemssertifikat/Pilotlisens"</string>
+    <string name="DOCUMENT_TYPE_CAT_PLEASURE_CRAFTS">"Sertifikat For Operatører Av Fritidsfartøy/Kapteinslisens"</string>
+    <string name="DOCUMENT_TYPE_CAT_REPRESENTATION">"Autorisasjon Til Å Representere Et Selskap"</string>
+    <string name="DOCUMENT_TYPE_CAT_RESIDENCE">"Bostedsrelatert Dokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_SEAFARERS">"Sjøfolks Identitetsdokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_SPECIAL">"Kort Med Spesiell Autorisasjon"</string>
+    <string name="DOCUMENT_TYPE_CAT_STAMP">"Stempel"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAIN">"Førerkort For Tog"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL">"Reisedokument"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL_NON_NATIONALS">"Reisedokument Utstedt Til Ikke-Statsborgere"</string>
+    <string name="DOCUMENT_TYPE_CAT_VEHICLE_LICENSE">"Billisens/Loggbok"</string>
+    <string name="DOCUMENT_TYPE_CAT_VISA">"Visum"</string>
+    <string name="DOCUMENT_TYPE_CAT_WORK_PERMIT">"Arbeidstillatelse"</string>
+    <string name="DOCUMENT_TYPE_KIND_BIRTH">"Fødsel"</string>
+    <string name="DOCUMENT_TYPE_KIND_DEATH_CERTIFICATE">"Dødsattest"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIPLOMATIC">"Diplomatisk"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIVORCE">"Skilsmisse"</string>
+    <string name="DOCUMENT_TYPE_KIND_ENTRY_STAMP">"Stempel for innreise"</string>
+    <string name="DOCUMENT_TYPE_KIND_EXIT_STAMP">"Stempel for utreise"</string>
+    <string name="DOCUMENT_TYPE_KIND_MARRIAGE">"Ekteskap"</string>
+    <string name="DOCUMENT_TYPE_KIND_MILITARY">"Militær"</string>
+    <string name="DOCUMENT_TYPE_KIND_NATIONALITY">"Nasjonalitet/Statsborgerskap"</string>
+    <string name="DOCUMENT_TYPE_KIND_ORDINARY">"Ordinær"</string>
+    <string name="DOCUMENT_TYPE_KIND_RELATED">"Relatert/Tilknyttet dokument"</string>
+    <string name="DOCUMENT_TYPE_KIND_SERVICE">"Tjeneste/Offisiell"</string>
+    <string name="DOCUMENT_TYPE_KIND_SOCIAL_SECURITY_CARD">"Trygdekort/Skattekort"</string>
+    <string name="DOCUMENT_TYPE_KIND_TEMPORARY">"Midlertidig/Foreløpig/Nødstilfelle"</string>
+    <string name="DRIVING_LICENCE">"Førerkort"</string>
+    <string name="EMERGENCY_PASSPORT">"Nødpass"</string>
+    <string name="GENERIC_CLOSE">"Lukk"</string>
+    <string name="GENERIC_ERROR">"Feil"</string>
+    <string name="GENERIC_ERROR_TEXT">"Noe gikk galt. Prøv på nytt, eller kontakt oss"</string>
+    <string name="GENERIC_QUIT">"Avslutt"</string>
+    <string name="GENERIC_RESTART">"Start på nytt"</string>
+    <string name="ID_CARD">"ID-kort"</string>
+    <string name="OTHER_DOCUMENT">"Annet"</string>
+    <string name="PASSPORT">"Pass"</string>
+    <string name="PICTURE_PROCESSING_LABEL">"Arbeider…"</string>
+    <string name="REF_TRAVEL_DOC">"Reisedokument for flyktninger"</string>
+    <string name="RESIDENCE_PERMIT">"Oppholdstillatelse"</string>
+    <string name="RESIDENCE_PERMIT_II_IV">"Oppholdstillatelse type II/IV"</string>
+    <string name="RESIDENCE_PERMIT_I_III_EU">"Oppholdstillatelse type I/III/EU"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_BUTTON">"Vis skanneinstruksjoner"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_COPY">"Forsikre deg om at koden er helt synlig. Prøv å unngå gjenskinn."</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_TITLE">"Slik skanner du ID-en din"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_NO_DOC_FOUND">"Finner ikke noe dokument"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCANNING">"Skanner…"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_BACK">"Ta et bilde av baksiden"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_FRONT">"Ta et bilde av forsiden"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_MRZ">"Skann koden som ser slik ut:"</string>
+    <string name="SCREEN_A_HINT_MRZ_IN_BOX">"Plasser koden i det uthevede området i boksen"</string>
+    <string name="SCREEN_A_HINT_SCAN_BACK">"Skann baksiden av dokumentet"</string>
+    <string name="SCREEN_A_HINT_SCAN_DOC_FROM_COUNTRY">"Skann et dokument fra: %s"</string>
+    <string name="SCREEN_A_HINT_SCAN_FRONT">"Skann forsiden av dokumentet"</string>
+    <string name="SCREEN_A_HINT_TURN_OVER">"Snu kortet"</string>
+    <string name="SCREEN_A_INIT_TEXT">"Initialiserer..."</string>
+    <string name="SCREEN_A_LOADING_TEXT">"Klargjør dokumentskanner"</string>
+    <string name="SCREEN_A_NAV_TITLE">"Skann ID-en din"</string>
+    <string name="SCREEN_A_STATE_SCANNING">"Skanner…"</string>
+    <string name="SCREEN_A_STATE_SCANNING_PAUSED">"Skanningen er midlertidig stanset"</string>
+    <string name="SCREEN_A_STATE_TURN_OVER">"Snu dokumentet"</string>
+    <string name="SCREEN_A_STATE_WRONG_DOCUMENT">"Feil dokument"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_BLOCK_HINT">"Juster rammen"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_CROPPING">"Er rammen plassert slik at den samsvarer med hjørnene i dokumentet?"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_READABLE">"Er alt klart og lesbart?"</string>
+    <string name="SCREEN_C_HINT_SCAN_RESULT_CROP">"Dra hjørnene til riktig posisjon for å justere rammen"</string>
+    <string name="SCREEN_C_NAV_TITLE">"Kontroller resultater"</string>
+    <string name="SCREEN_D_E_NAV_TITLE_COUNTRY">"Trinn 1: Velg land"</string>
+    <string name="SCREEN_D_E_SEARCH_NO_RESULT">"Ingen resultater for \"%s\""</string>
+    <string name="SCREEN_D_E_SEARCH_PLACEHOLDER">"Søk"</string>
+    <string name="SCREEN_D_HEADING_ALL_COUNTRIES">"Alle land"</string>
+    <string name="SCREEN_D_HEADING_SUGGESTED_COUNTRY">"Foreslått land"</string>
+    <string name="SCREEN_E_J_LABEL_SAMPLE_DOC">"eksempeldokument"</string>
+    <string name="SCREEN_E_NAV_TITLE_DOC_TYPE">"Trinn 2: Velg dokumenttype"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_CHECK">"Kontroller resultatet"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_PROTECT_HINT">"Beskytt sensitive data"</string>
+    <string name="SCREEN_F_G_HINT_SENSITIVE_DATA">"Kryss ut sensitive data"</string>
+    <string name="SCREEN_F_G_NAV_TITLE">"Masker personopplysninger"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_MRZ_READ_FAIL">"Lesing av koden mislyktes"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_NOT_VALID">"Dette dokumentet er ikke gyldig"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_INSTRUCTIONS">"Forsikre deg om at koden ikke er dekket av fingrene dine eller smuss\n\nSjekk om det ikke er for mye gjenskinn"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_NOT_VALID_INSTRUCTIONS">"Dokumentet du har skannet, er utelatt fra listen over tillatte dokumenter\n\nBruk et annet dokument"</string>
+    <string name="SCREEN_H_NAV_TITLE">"Kan ikke lese kode"</string>
+    <string name="SCREEN_H_NAV_TITLE_NOT_VALID">"Dokumentet er ikke gyldig"</string>
+    <string name="SCREEN_J_BOTTOM_STATE_DOC_TYPE">"Velg det eksempeldokumentet som ligner mest på ditt dokument"</string>
+    <string name="SCREEN_J_INSTR_INSTRUCTIONS">"I listen kan du se flere eksempeldokumenter utstedt av myndighetene. Velg det dokumentet som ligner mest på dokumentet ditt, basert på utseendet.\n\nDet er mulig at flere dokumenter ikke kan skilles fra hverandre. I så fall kan du se nøye på etikettene under eksempeldokumentene og velge det mest passende."</string>
+    <string name="SCREEN_J_INSTR_NAV_TITLE">"Hjelp for dokumentvalg"</string>
+    <string name="SCREEN_J_NAV_TITLE">"Velg et dokument"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Plasser og hold kortet på baksiden av telefonen, og beveg det sakte til telefonen vibrerer"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Plasser og hold kortet på baksiden av telefonen, og beveg det sakte til telefonen vibrerer"</string>
+    <string name="SCREEN_K_ACTIONSHEET_COMPLETE">"Lesing fullført, laster inn data…"</string>
+    <string name="SCREEN_K_ACTIONSHEET_HOLD_INSTRUCTION">"Plasser og hold kortet eller passet på baksiden av telefonen, og beveg det sakte til telefonen vibrerer"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Plasser og hold passet på baksiden av telefonen, og beveg det sakte til telefonen vibrerer"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Plasser og hold passet på baksiden av telefonen, og beveg det sakte til telefonen vibrerer"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_ANDROID">"Vent til alle dataene på chipen er lest. Dette kan ta noen sekunder."</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_IOS">"Vent til alle dataene på chipen er lest. Dette kan ta opptil 30 sekunder."</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECTING">"Kobler til…"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECT_TO_READER">"Koble til Bluetooth NFC-Leser"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_ANDROID">"Plasser og oppbevar dokumentet på din telefon"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_IOS">"Plasser og oppbevar dokumentet på leseren"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_LOST">"Tilkobling til dokument tapt"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_READING">"Leser chipen..."</string>
+    <string name="SCREEN_K_HINT_HOLD_STEADY">"Hold stødig"</string>
+    <string name="SCREEN_K_NAV_TITLE">"Skann NFC"</string>
+    <string name="SCREEN_O1_HEADER">"Har dokumentet en maskinlesbar sone (MRZ)?\n\nEn MRZ ser slik ut:"</string>
+    <string name="SCREEN_O2_HEADER">"Ta et bilde av dokumentet"</string>
+    <string name="SCREEN_O2_INSTRUCTION_LABEL">"Ta et bilde av den siden av dokumentet som har en kode som denne:"</string>
+    <string name="SCREEN_O2_O5_SCAN_INSTRUCTIONS">"Sørg for at:\n -Hele dokumentet er inne i rammen.\n -Rommet er godt opplyst.\n -Det ikke er noe gjenskinn på dokumentet."</string>
+    <string name="SCREEN_O3_1_HEADER">"Plasser telefonen på passet ditt"</string>
+    <string name="SCREEN_O3_1_SCAN_INSTRUCTIONS">"Slik skanner du chipen i dokumentet:\n\n1. Gjør dokumentet klart.\n\n2. Trykk på start.\n\n3. Plasser den øvre baksiden av telefonen på passet til du kjenner en vibrasjon.\n\n4. Hold deretter stødig og vent til fremdriftslinjen er fullført."</string>
+    <string name="SCREEN_O3_2_HEADER">"Plasser telefonen på kortet"</string>
+    <string name="SCREEN_O3_2_SCAN_INSTRUCTIONS">"Slik skanner du chipen i dokumentet:\n\n1. Gjør dokumentet klart.\n\n2. Trykk på start.\n\n3. Plasser den øvre baksiden av telefonen på kortet til du kjenner en vibrasjon.\n\n4. Hold deretter stødig og vent til fremdriftslinjen er fullført."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_INSTRUCTIONS">"Slik skanner du chipen i dokumentet:\n\n- Ikke legg telefonen din på dokumentet før du blir bedt om det.\n\n- Når du blir bedt om det, plasserer du baksiden av telefonen på dokumentet.\n\n- Beveg dokumentet forsiktig til du kjenner en vibrasjon. Hold det deretter stødig.\n\n- Hvis det ikke lykkes, kan du prøve å løfte enheten fra dokumentet og prøve på nytt."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_TITLE">"Skanning mislyktes"</string>
+    <string name="SCREEN_O5_INSTRUCTION_LABEL">"Plasser dokumentet foran kameraet. Når dokumentet gjenkjennes, tas et bilde automatisk."</string>
+    <string name="UNKNOWN_DOCUMENT">"Ukjent Dokument"</string>
+    <string name="VISA">"Visum"</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Naviger hjem"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Gå opp"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Flere alternativer"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Ferdig"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Se alle"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Velg en app"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"AV"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"PÅ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"slett"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Funksjon+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"mellomrom"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Meny+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Søk"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Slett søket"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Søkeord"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Søk"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Utfør søket"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Talesøk"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Del med"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Del med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Skjul"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Lukk navigasjonsmenyen"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Lukk arket"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Slå på"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerer ikke med mindre du slår på Google Play-tjenester."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Slå på Google Play-tjenester"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installer"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan ikke kjøre uten Google Play-tjenester, som ikke er installert på enheten din."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Installer Google Play-tjenester"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play Tjenester-tilgjengelighet"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play Tjenester-feil"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> har problemer med Google Play-tjenester. Prøv på nytt."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan ikke kjøre uten Google Play-tjenester, som ikke støttes av enheten din."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Oppdater"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kjører ikke med mindre du oppdaterer Google Play Tjenester."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Oppdater Google Play-tjenester"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kjører ikke uten Google Play-tjenester, som oppdateres akkurat nå."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Du må installere en ny versjon av Google Play-tjenester. Appen oppdateres automatisk om en kort stund."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Åpne på telefonen"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Logg på"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Logg på med Google"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ugyldige inndata"</string>
+    <string msgid="6827826412747255547" name="in_progress">"Pågår"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Verken avmerket eller ikke avmerket"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigasjonsmeny"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ikke valgt"</string>
+    <string msgid="875452955155264703" name="off">"Av"</string>
+    <string msgid="8655164131929253426" name="on">"På"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Søk"</string>
+    <string msgid="6043586758067023" name="selected">"Valgt"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Fane"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> prosent."</string>
+</resources>

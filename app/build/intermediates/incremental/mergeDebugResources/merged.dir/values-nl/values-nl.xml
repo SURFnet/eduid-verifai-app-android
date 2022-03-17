@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="ALERT_BODY_CHOOSE_SIZE">"Kies het formaat van het document"</string>
+    <string name="ALERT_BODY_NO_BLUETOOTH">"Bluetooth is op het moment in beschikbaar. Zet Bluetooth aan om door te gaan en probeer opnieuw te verbinden."</string>
+    <string name="ALERT_BODY_NO_CARD">"Houd het document in beeld totdat het verwerken klaar is"</string>
+    <string name="ALERT_BODY_NO_INTERNET">"Controleer de internetverbinding"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_CREDITCARD">"Creditcardformaat"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_PASSPORT">"Paspoortformaat"</string>
+    <string name="ALERT_BTN_NEGATIVE_NO_INTERNET_CANCEL">"Annuleer"</string>
+    <string name="ALERT_BTN_PRIMARY_NO_INTERNET_RETRY">"Opnieuw"</string>
+    <string name="ALERT_TITLE_CHOOSE_SIZE">"Welk formaat heeft het document?"</string>
+    <string name="ALERT_TITLE_NO_BLUETOOTH">"Bluetooth is niet beschikbaar"</string>
+    <string name="ALERT_TITLE_NO_CARD">"Geen document gevonden"</string>
+    <string name="ALERT_TITLE_NO_INTERNET">"Geen Internet verbinding"</string>
+    <string name="ASSISTED_LABEL_BTN_CLOSE">"Afsluiten"</string>
+    <string name="ASSISTED_LABEL_BTN_ERASER">"Gum"</string>
+    <string name="ASSISTED_LABEL_BTN_MOVE">"Verplaats"</string>
+    <string name="ASSISTED_LABEL_BTN_PAN">"Verschuif"</string>
+    <string name="ASSISTED_LABEL_BTN_PEN">"Pen"</string>
+    <string name="ASSISTED_LABEL_BTN_UNDO">"Herstel"</string>
+    <string name="BTN_ADJUST_FRAME">"Nee, kader aanpassen"</string>
+    <string name="BTN_ALTERNATIVE_SCAN_METHOD">"Alternatieve scanmethode"</string>
+    <string name="BTN_CANCEL">"Annuleer"</string>
+    <string name="BTN_CHANGE">"Aanpassen"</string>
+    <string name="BTN_CONNECT_TO_READER">"Verbinden met NFC lezer"</string>
+    <string name="BTN_CONTINUE">"Doorgaan"</string>
+    <string name="BTN_CONTINUE_SCANNING">"Doorgaan met scannen"</string>
+    <string name="BTN_COUNTRY_NOT_AVAIL">"Land niet beschikbaar"</string>
+    <string name="BTN_DOC_TYPE_NOT_LISTED">"Het document staat er niet tussen"</string>
+    <string name="BTN_DONE">"Klaar"</string>
+    <string name="BTN_NEXT">"Volgende"</string>
+    <string name="BTN_NO">"Nee"</string>
+    <string name="BTN_NOT_AVAILABLE_ON_DOC">"Niet beschikbaar op dit document"</string>
+    <string name="BTN_NO_RETRY">"Nee, opnieuw"</string>
+    <string name="BTN_OK">"OK"</string>
+    <string name="BTN_RETRY">"Opnieuw"</string>
+    <string name="BTN_SCAN_DOCUMENT_MAN">"Scan document handmatig"</string>
+    <string name="BTN_SCAN_ID_OTHER_COUNTRY">"Scan ID van ander land"</string>
+    <string name="BTN_SELECT">"Selecteer"</string>
+    <string name="BTN_SELECT_DOC_MAN">"Kies document handmatig"</string>
+    <string name="BTN_SELECT_DOC_MANUAL">"Andere opties"</string>
+    <string name="BTN_SKIP">"Overslaan"</string>
+    <string name="BTN_START">"Start de scan"</string>
+    <string name="BTN_UNABLE_TO_SCAN">"Het scannen lukt niet"</string>
+    <string name="BTN_YES">"Ja"</string>
+    <string name="BTN_YES_CONTINUE">"Ja, doorgaan"</string>
+    <string name="DOCUMENT_TYPE_CAT_CIVIL">"Burgerlijke Stand/Ander Officieel Document"</string>
+    <string name="DOCUMENT_TYPE_CAT_DRIVING_LICENSE">"Rijbewijs"</string>
+    <string name="DOCUMENT_TYPE_CAT_ENTRY_PAPER">"Inreisstempel"</string>
+    <string name="DOCUMENT_TYPE_CAT_IDENTITY_CARD">"Identiteitskaart"</string>
+    <string name="DOCUMENT_TYPE_CAT_OTHER">"Ander Document"</string>
+    <string name="DOCUMENT_TYPE_CAT_PASSPORT">"Paspoort"</string>
+    <string name="DOCUMENT_TYPE_CAT_PILOT">"Vliegbrevet"</string>
+    <string name="DOCUMENT_TYPE_CAT_PLEASURE_CRAFTS">"Vaarbewijs Voor Pleziervaartuigen"</string>
+    <string name="DOCUMENT_TYPE_CAT_REPRESENTATION">"Machtiging Tot Vertegenwoordiging Van Een Vennootschap"</string>
+    <string name="DOCUMENT_TYPE_CAT_RESIDENCE">"Verblijfsgerelateerd Document"</string>
+    <string name="DOCUMENT_TYPE_CAT_SEAFARERS">"Identiteitsbewijs Voor Zeevarenden"</string>
+    <string name="DOCUMENT_TYPE_CAT_SPECIAL">"Bijzondere Vergunningskaart"</string>
+    <string name="DOCUMENT_TYPE_CAT_STAMP">"Stempel"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAIN">"Rijbewijs Voor Treinbestuurders"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL">"Reisdocument"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL_NON_NATIONALS">"Reisdocument Afgegeven Aan Niet-Onderdanen"</string>
+    <string name="DOCUMENT_TYPE_CAT_VEHICLE_LICENSE">"Voertuigbewijs"</string>
+    <string name="DOCUMENT_TYPE_CAT_VISA">"Visum"</string>
+    <string name="DOCUMENT_TYPE_CAT_WORK_PERMIT">"Werkvergunning"</string>
+    <string name="DOCUMENT_TYPE_KIND_BIRTH">"Geboorte"</string>
+    <string name="DOCUMENT_TYPE_KIND_DEATH_CERTIFICATE">"Overlijdensakte"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIPLOMATIC">"Diplomatiek"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIVORCE">"Echtscheiding"</string>
+    <string name="DOCUMENT_TYPE_KIND_ENTRY_STAMP">"Inreisstempel"</string>
+    <string name="DOCUMENT_TYPE_KIND_EXIT_STAMP">"Uitreisstempel"</string>
+    <string name="DOCUMENT_TYPE_KIND_MARRIAGE">"Huwelijk"</string>
+    <string name="DOCUMENT_TYPE_KIND_MILITARY">"Militair"</string>
+    <string name="DOCUMENT_TYPE_KIND_NATIONALITY">"Nationaliteit/Burgerschap"</string>
+    <string name="DOCUMENT_TYPE_KIND_ORDINARY">"Gewoon"</string>
+    <string name="DOCUMENT_TYPE_KIND_RELATED">"Verwant Document"</string>
+    <string name="DOCUMENT_TYPE_KIND_SERVICE">"Dienst"</string>
+    <string name="DOCUMENT_TYPE_KIND_SOCIAL_SECURITY_CARD">"Sociale Zekerheidskaart/Belastingkaart"</string>
+    <string name="DOCUMENT_TYPE_KIND_TEMPORARY">"Tijdelijk/Voorlopig/Nood"</string>
+    <string name="DRIVING_LICENCE">"Rijbewijs"</string>
+    <string name="EMERGENCY_PASSPORT">"Noodpaspoort"</string>
+    <string name="GENERIC_CLOSE">"Afsluiten"</string>
+    <string name="GENERIC_ERROR">"Fout"</string>
+    <string name="GENERIC_ERROR_TEXT">"Er is iets misgegaan. Probeer opnieuw of neem contact met ons op."</string>
+    <string name="GENERIC_QUIT">"Afsluiten"</string>
+    <string name="GENERIC_RESTART">"Opnieuw beginnen"</string>
+    <string name="ID_CARD">"ID Kaart"</string>
+    <string name="OTHER_DOCUMENT">"Anders"</string>
+    <string name="PASSPORT">"Paspoort"</string>
+    <string name="PICTURE_PROCESSING_LABEL">"Foto verwerken…"</string>
+    <string name="REF_TRAVEL_DOC">"Vluchtelingen reisdocument"</string>
+    <string name="RESIDENCE_PERMIT">"Verblijfsdocument"</string>
+    <string name="RESIDENCE_PERMIT_II_IV">"Verblijfsvergunning type II/IV"</string>
+    <string name="RESIDENCE_PERMIT_I_III_EU">"Verblijfsvergunning type I/III/EU"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_BUTTON">"Laat scaninstructie zien"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_COPY">"Zorg ervoor dat de code op het ID-bewijs volledig zichtbaar is. Voorkom glans op het document."</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_TITLE">"Hulp bij het scannen"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_NO_DOC_FOUND">"Geen document gevonden"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCANNING">"Scannen…"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_BACK">"Maak een foto van de achterkant"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_FRONT">"Maak een foto van de voorkant"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_MRZ">"Scan deze code op je ID-bewijs:"</string>
+    <string name="SCREEN_A_HINT_MRZ_IN_BOX">"Plaats de code in het gemarkeerde deel van het vierkant"</string>
+    <string name="SCREEN_A_HINT_SCAN_BACK">"Scan de achterkant van het document"</string>
+    <string name="SCREEN_A_HINT_SCAN_DOC_FROM_COUNTRY">"Scan een document uit: %s"</string>
+    <string name="SCREEN_A_HINT_SCAN_FRONT">"Scan de voorkant van het document"</string>
+    <string name="SCREEN_A_HINT_TURN_OVER">"Draai de kaart om"</string>
+    <string name="SCREEN_A_INIT_TEXT">"Initialiseren…"</string>
+    <string name="SCREEN_A_LOADING_TEXT">"Documentscanner voorbereiden"</string>
+    <string name="SCREEN_A_NAV_TITLE">"Scan je ID-bewijs"</string>
+    <string name="SCREEN_A_STATE_SCANNING">"Scannen…"</string>
+    <string name="SCREEN_A_STATE_SCANNING_PAUSED">"Scannen gepauzeerd"</string>
+    <string name="SCREEN_A_STATE_TURN_OVER">"Draai het document om"</string>
+    <string name="SCREEN_A_STATE_WRONG_DOCUMENT">"Verkeerde document"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_BLOCK_HINT">"Pas het kader aan"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_CROPPING">"Is het kader zo geplaatst dat het overeenkomt met de hoeken van het document?"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_READABLE">"Is alles scherp en goed leesbaar?"</string>
+    <string name="SCREEN_C_HINT_SCAN_RESULT_CROP">"Pas het kader aan door de hoeken naar de juiste plaats te slepen"</string>
+    <string name="SCREEN_C_NAV_TITLE">"Controleer resultaat"</string>
+    <string name="SCREEN_D_E_NAV_TITLE_COUNTRY">"Stap 1: Selecteer land"</string>
+    <string name="SCREEN_D_E_SEARCH_NO_RESULT">"Geen resultaten voor \"%s\""</string>
+    <string name="SCREEN_D_E_SEARCH_PLACEHOLDER">"Zoeken"</string>
+    <string name="SCREEN_D_HEADING_ALL_COUNTRIES">"Alle landen"</string>
+    <string name="SCREEN_D_HEADING_SUGGESTED_COUNTRY">"Voorgesteld land"</string>
+    <string name="SCREEN_E_J_LABEL_SAMPLE_DOC">"Dit is een voorbeelddocument"</string>
+    <string name="SCREEN_E_NAV_TITLE_DOC_TYPE">"Stap 2: Documenttype selecteren"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_CHECK">"Controleer resultaat"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_PROTECT_HINT">"Bescherm gevoelige informatie"</string>
+    <string name="SCREEN_F_G_HINT_SENSITIVE_DATA">"Markeer gevoelige informatie"</string>
+    <string name="SCREEN_F_G_NAV_TITLE">"Maskeer persoonlijke data"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_MRZ_READ_FAIL">"Lezen van code op ID-bewijs is mislukt"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_NOT_VALID">"Dit document is niet geldig"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_INSTRUCTIONS">"Zorg ervoor dat de code niet door je vinger is bedekt\n\nProbeer weerspiegeling op en rondom de code te voorkomen"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_NOT_VALID_INSTRUCTIONS">"Het gescande document staat niet in de lijst met toegestane documenten\n\nGebruik een ander document"</string>
+    <string name="SCREEN_H_NAV_TITLE">"Code niet leesbaar"</string>
+    <string name="SCREEN_H_NAV_TITLE_NOT_VALID">"Document is niet geldig"</string>
+    <string name="SCREEN_J_BOTTOM_STATE_DOC_TYPE">"Selecteer het voorbeelddocument dat het meest op jouw document lijkt"</string>
+    <string name="SCREEN_J_INSTR_INSTRUCTIONS">"In de lijst zie je verschillende door de overheid uitgegeven voorbeelddocumenten. Kies op basis van het uiterlijk het document dat het meest op jouw document lijkt.\n\nHet is mogelijk dat een aantal documenten niet van elkaar te onderscheiden zijn. Kijk in dat geval goed naar de beschrijvingen onder de voorbeelddocumenten en kies het document dat volgens jou het meest geschikt is."</string>
+    <string name="SCREEN_J_INSTR_NAV_TITLE">"Hulp bij de documentkeuze"</string>
+    <string name="SCREEN_J_NAV_TITLE">"Kies document"</string>
+    <string name="SCREEN_K_ACTIONSHEET_COMPLETE">"Uitlezen afgerond, data laden…"</string>
+    <string name="SCREEN_K_ACTIONSHEET_HOLD_INSTRUCTION">"Plaats het document tegen de achterkant van de telefoon en beweeg deze langzaam totdat de telefoon trilt"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"Plaats het document tegen de achterkant van de telefoon en beweeg deze langzaam totdat de telefoon trilt"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"Plaats het document tegen de achterkant van de telefoon en beweeg deze langzaam totdat de telefoon trilt"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_ANDROID">"Wacht tot alle data op de chip is uitgelezen. Dit kan enkele seconden duren."</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_IOS">"Wacht tot alle data is uitgelezen. Dit kan tot 30 seconden duren."</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECTING">"Verbinding maken…"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECT_TO_READER">"Maak verbinding met de Bluetooth NFC lezer"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_ANDROID">"Plaats het document tegen de achterkant van het toestel"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_IOS">"Plaats het document op de lezer"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_LOST">"Verbinding verbroken"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_READING">"Chip uitlezen…"</string>
+    <string name="SCREEN_K_HINT_HOLD_STEADY">"Houd het document goed stil"</string>
+    <string name="SCREEN_K_NAV_TITLE">"Scan NFC"</string>
+    <string name="SCREEN_L_BOTTOM_BODY_SPEECH_WORDS">"Appel Banaan Pizza"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_CLOSE_EYES">"Sluit uw ogen voor %f seconden"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_LEFT">"Kantel uw hoofd naar links"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_RIGHT">"Kantel uw hoofd naar rechts"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_SELFIE">"Neem een foto van het gezicht"</string>
+    <string name="SCREEN_L_BOTTOM_STATE_SPEECH">"Spreek deze woorden uit"</string>
+    <string name="SCREEN_L_NAV_TITLE">"Liveness check"</string>
+    <string name="SCREEN_L_RECORDING_WAIT">"Opnemen… "</string>
+    <string name="SCREEN_O1_HEADER">"Heeft je document een Machine Readable Zone (MRZ)?\n\nEen MRZ ziet er als volgt uit:"</string>
+    <string name="SCREEN_O2_HEADER">"Neem een foto van het document"</string>
+    <string name="SCREEN_O2_INSTRUCTION_LABEL">"Scan de kant van het ID-bewijs waar een code zoals deze op staat:"</string>
+    <string name="SCREEN_O2_O5_SCAN_INSTRUCTIONS">"Zorg ervoor dat:\n - Het ID-bewijs zich binnen het kader bevindt.\n - De ruimte goed verlicht is.\n - Er geen schittering op het document zichtbaar is."</string>
+    <string name="SCREEN_O3_1_HEADER">"Leg de telefoon op het paspoort"</string>
+    <string name="SCREEN_O3_1_SCAN_INSTRUCTIONS">"Om de chip in het paspoort uit te lezen:\n1. Leg de telefoon op het paspoort\n2. Beweeg het paspoort rustig totdat het uitlezen begint. Houd daarna goed stil."</string>
+    <string name="SCREEN_O3_2_HEADER">"Leg de telefoon op het ID-bewijs"</string>
+    <string name="SCREEN_O3_2_SCAN_INSTRUCTIONS">"Om de chip in het ID-bewijs uit te lezen:\n1. Leg de telefoon op het ID-bewijs\n2. Beweeg het ID-bewijs rustig totdat het uitlezen begint. Houd daarna goed stil."</string>
+    <string name="SCREEN_O5_INSTRUCTION_LABEL">"Houd het ID-bewijs voor de camera. Er wordt automatisch een foto genomen zodra het document wordt herkend."</string>
+    <string name="UNKNOWN_DOCUMENT">"Onbekend document"</string>
+    <string name="VISA">"Visums"</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Navigeren naar startpositie"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Omhoog navigeren"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Meer opties"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Klaar"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Alles weergeven"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Een app selecteren"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"UIT"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"AAN"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Functie +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"spatie"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Zoeken…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Zoekopdracht wissen"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Zoekopdracht"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Zoeken"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Zoekopdracht verzenden"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Gesproken zoekopdracht"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Delen met"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Delen met <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Samenvouwen"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Navigatiemenu sluiten"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Blad sluiten"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Inschakelen"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> werkt niet, tenzij je Google Play-services inschakelt."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-services inschakelen"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installeren"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die je nog niet op je apparaat hebt."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-services ophalen"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Beschikbaarheid van Google Play-services"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fout met Google Play-services"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ondervindt problemen met Google Play-services. Probeer het opnieuw."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die niet worden ondersteund op je apparaat."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Updaten"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd, tenzij je Google Play-services updatet."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-services updaten"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die momenteel worden geüpdatet."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Er is een nieuwe versie van Google Play-services vereist. De update wordt binnenkort automatisch uitgevoerd."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Openen op telefoon"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Inloggen"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Inloggen met Google"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ongeldige invoer"</string>
+    <string msgid="6827826412747255547" name="in_progress">"Bezig"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Niet aangevinkt of uitgevinkt"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigatiemenu"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Niet geselecteerd"</string>
+    <string msgid="875452955155264703" name="off">"Uit"</string>
+    <string msgid="8655164131929253426" name="on">"Aan"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Zoeken"</string>
+    <string msgid="6043586758067023" name="selected">"Geselecteerd"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Tabblad"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+</resources>

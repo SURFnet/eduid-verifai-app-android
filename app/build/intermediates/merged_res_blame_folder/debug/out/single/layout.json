@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/peter/verifai/example-app-android/kotlin/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_verifai_result.xml",
+        "source": "/home/peter/verifai/example-app-android/kotlin/app/src/main/res/layout/content_verifai_result.xml"
+    },
+    {
+        "merged": "/home/peter/verifai/example-app-android/kotlin/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_verifai_result.xml",
+        "source": "/home/peter/verifai/example-app-android/kotlin/app/src/main/res/layout/activity_verifai_result.xml"
+    },
+    {
+        "merged": "/home/peter/verifai/example-app-android/kotlin/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/peter/verifai/example-app-android/kotlin/app/src/main/res/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="ALERT_BODY_CHOOSE_SIZE">"스캔할 문서의 규격을 선택하세요."</string>
+    <string name="ALERT_BODY_NO_BLUETOOTH">"현재 블루투스를 사용할 수 없습니다. 계속하려면 블루투스를 켜고 연결을 다시 시도하세요."</string>
+    <string name="ALERT_BODY_NO_CARD">"처리가 끝날 때까지 문서를 움직이지 말고 그대로 두세요."</string>
+    <string name="ALERT_BODY_NO_INTERNET">"인터넷 연결을 확인해 주세요."</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_CREDITCARD">"신용카드 크기"</string>
+    <string name="ALERT_BTN_CHOOSE_SIZE_PASSPORT">"여권"</string>
+    <string name="ALERT_BTN_NEGATIVE_NO_INTERNET_CANCEL">"취소"</string>
+    <string name="ALERT_BTN_PRIMARY_NO_INTERNET_RETRY">"재시도"</string>
+    <string name="ALERT_TITLE_CHOOSE_SIZE">"문서의 규격이 무엇입니까?"</string>
+    <string name="ALERT_TITLE_NO_BLUETOOTH">"블루투스를 사용할 수 없습니다"</string>
+    <string name="ALERT_TITLE_NO_CARD">"탐지된 문서가 없습니다"</string>
+    <string name="ALERT_TITLE_NO_INTERNET">"인터넷이 연결되어 있지 않음"</string>
+    <string name="ASSISTED_LABEL_BTN_CLOSE">"닫기"</string>
+    <string name="ASSISTED_LABEL_BTN_ERASER">"지우개"</string>
+    <string name="ASSISTED_LABEL_BTN_MOVE">"이동"</string>
+    <string name="ASSISTED_LABEL_BTN_PAN">"수직/수평 추적 이동"</string>
+    <string name="ASSISTED_LABEL_BTN_PEN">"펜"</string>
+    <string name="ASSISTED_LABEL_BTN_UNDO">"실행 취소"</string>
+    <string name="BTN_ADJUST_FRAME">"아니요, 테두리를 조정합니다"</string>
+    <string name="BTN_ALTERNATIVE_SCAN_METHOD">"대체 스캔 방법"</string>
+    <string name="BTN_CANCEL">"취소하기"</string>
+    <string name="BTN_CHANGE">"바꾸기"</string>
+    <string name="BTN_CONNECT_TO_READER">"NFC 판독기에 연결하세요"</string>
+    <string name="BTN_CONTINUE">"계속"</string>
+    <string name="BTN_CONTINUE_SCANNING">"스캔 계속하기"</string>
+    <string name="BTN_COUNTRY_NOT_AVAIL">"해당 국가가 가능하지 않습니다"</string>
+    <string name="BTN_DOC_TYPE_NOT_LISTED">"문서가 열거되어 있지 않습니다"</string>
+    <string name="BTN_DONE">"완료"</string>
+    <string name="BTN_NEXT">"다음"</string>
+    <string name="BTN_NO">"아니요"</string>
+    <string name="BTN_NOT_AVAILABLE_ON_DOC">"이 문서에서는 사용할 수 없습니다"</string>
+    <string name="BTN_NO_RETRY">"아니요, 다시 시도합니다"</string>
+    <string name="BTN_OK">"OK"</string>
+    <string name="BTN_RETRY">"재시도"</string>
+    <string name="BTN_SCAN_DOCUMENT_MAN">"문서 수동 스캔"</string>
+    <string name="BTN_SCAN_ID_OTHER_COUNTRY">"다른 국가의 신분증 스캔하기"</string>
+    <string name="BTN_SELECT">"선택"</string>
+    <string name="BTN_SELECT_DOC_MANUAL">"기타 선택사항"</string>
+    <string name="BTN_START">"시작하기"</string>
+    <string name="BTN_UNABLE_TO_SCAN">"스캔할 수 없습니다"</string>
+    <string name="BTN_YES">"예"</string>
+    <string name="BTN_YES_CONTINUE">"예, 계속합니다"</string>
+    <string name="DOCUMENT_TYPE_CAT_CIVIL">"시민권 상태/기타 공식 문서"</string>
+    <string name="DOCUMENT_TYPE_CAT_DRIVING_LICENSE">"운전면허증"</string>
+    <string name="DOCUMENT_TYPE_CAT_ENTRY_PAPER">"입국 서류"</string>
+    <string name="DOCUMENT_TYPE_CAT_IDENTITY_CARD">"신분증"</string>
+    <string name="DOCUMENT_TYPE_CAT_OTHER">"기타 문서"</string>
+    <string name="DOCUMENT_TYPE_CAT_PASSPORT">"여권"</string>
+    <string name="DOCUMENT_TYPE_CAT_PILOT">"승무원 증명서/조종사 면허증"</string>
+    <string name="DOCUMENT_TYPE_CAT_PLEASURE_CRAFTS">"유람선 작동자 증명서/선장 면허증"</string>
+    <string name="DOCUMENT_TYPE_CAT_REPRESENTATION">"회사를 대표할 수 있는 권한"</string>
+    <string name="DOCUMENT_TYPE_CAT_RESIDENCE">"거주 관련 문서"</string>
+    <string name="DOCUMENT_TYPE_CAT_SEAFARERS">"선원 신분 증명서"</string>
+    <string name="DOCUMENT_TYPE_CAT_SPECIAL">"특별 승인 카드"</string>
+    <string name="DOCUMENT_TYPE_CAT_STAMP">"도장"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAIN">"열차 운전 면허증"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL">"여행 서류"</string>
+    <string name="DOCUMENT_TYPE_CAT_TRAVEL_NON_NATIONALS">"비국적자에게 발급되는 여행 서류"</string>
+    <string name="DOCUMENT_TYPE_CAT_VEHICLE_LICENSE">"차량 등록증/등록증"</string>
+    <string name="DOCUMENT_TYPE_CAT_VISA">"비자"</string>
+    <string name="DOCUMENT_TYPE_CAT_WORK_PERMIT">"취업 허가서"</string>
+    <string name="DOCUMENT_TYPE_KIND_BIRTH">"출생"</string>
+    <string name="DOCUMENT_TYPE_KIND_DEATH_CERTIFICATE">"사망신고서"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIPLOMATIC">"외교관"</string>
+    <string name="DOCUMENT_TYPE_KIND_DIVORCE">"이혼"</string>
+    <string name="DOCUMENT_TYPE_KIND_ENTRY_STAMP">"입국 도장"</string>
+    <string name="DOCUMENT_TYPE_KIND_EXIT_STAMP">"출국 도장"</string>
+    <string name="DOCUMENT_TYPE_KIND_MARRIAGE">"혼인"</string>
+    <string name="DOCUMENT_TYPE_KIND_MILITARY">"군대"</string>
+    <string name="DOCUMENT_TYPE_KIND_NATIONALITY">"국적/시민권"</string>
+    <string name="DOCUMENT_TYPE_KIND_ORDINARY">"일반"</string>
+    <string name="DOCUMENT_TYPE_KIND_RELATED">"관련/연관 문서"</string>
+    <string name="DOCUMENT_TYPE_KIND_SERVICE">"서비스/관용"</string>
+    <string name="DOCUMENT_TYPE_KIND_SOCIAL_SECURITY_CARD">"사회보장카드/납세카드"</string>
+    <string name="DOCUMENT_TYPE_KIND_TEMPORARY">"임시/잠정/긴급"</string>
+    <string name="DRIVING_LICENCE">"운전면허증"</string>
+    <string name="EMERGENCY_PASSPORT">"긴급여권"</string>
+    <string name="GENERIC_CLOSE">"닫기"</string>
+    <string name="GENERIC_ERROR">"에러"</string>
+    <string name="GENERIC_ERROR_TEXT">"오류가 발생했습니다. 다시 시도하거나 문의해 주세요"</string>
+    <string name="GENERIC_QUIT">"중단하기"</string>
+    <string name="GENERIC_RESTART">"다시 시작하기"</string>
+    <string name="ID_CARD">"신분증"</string>
+    <string name="OTHER_DOCUMENT">"기타"</string>
+    <string name="PASSPORT">"여권"</string>
+    <string name="PICTURE_PROCESSING_LABEL">"처리 중…"</string>
+    <string name="REF_TRAVEL_DOC">"난민 여행 서류"</string>
+    <string name="RESIDENCE_PERMIT">"거주허가증"</string>
+    <string name="RESIDENCE_PERMIT_II_IV">"거주 허가 유형 II/IV"</string>
+    <string name="RESIDENCE_PERMIT_I_III_EU">"거주 허가 유형 I/III/EU"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_BUTTON">"스캔 지시사항 보기"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_COPY">"코드가 전부 보이도록 해 주세요. 빛이 반사되지 않도록 하세요."</string>
+    <string name="SCREEN_A_BOTTOM_STATE_HELP_HINT_TITLE">"신분증을 스캔하는 방법"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_NO_DOC_FOUND">"문서를 찾을 수 없습니다"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCANNING">"스캔 중…"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_BACK">"뒷면의 사진을 찍어주세요"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_FRONT">"앞면의 사진을 찍어주세요"</string>
+    <string name="SCREEN_A_BOTTOM_STATE_SCAN_MRZ">"이렇게 생긴 코드를 스캔하세요:"</string>
+    <string name="SCREEN_A_HINT_MRZ_IN_BOX">"상자의 강조 표시된 영역 안에 코드를 배치하세요"</string>
+    <string name="SCREEN_A_HINT_SCAN_BACK">"문서 뒷면을 스캔하세요"</string>
+    <string name="SCREEN_A_HINT_SCAN_DOC_FROM_COUNTRY">"%s 문서를 스캔하세요"</string>
+    <string name="SCREEN_A_HINT_SCAN_FRONT">"문서 앞면을 스캔하세요"</string>
+    <string name="SCREEN_A_HINT_TURN_OVER">"신분증을 뒤집으세요"</string>
+    <string name="SCREEN_A_INIT_TEXT">"초기화 중…"</string>
+    <string name="SCREEN_A_LOADING_TEXT">"문서 스캐너를 준비하는 중입니다"</string>
+    <string name="SCREEN_A_NAV_TITLE">"신분증 스캔"</string>
+    <string name="SCREEN_A_STATE_SCANNING">"스캔 중…"</string>
+    <string name="SCREEN_A_STATE_SCANNING_PAUSED">"스캔이 일시 중지됨"</string>
+    <string name="SCREEN_A_STATE_TURN_OVER">"문서를 뒤집으세요"</string>
+    <string name="SCREEN_A_STATE_WRONG_DOCUMENT">"맞지 않는 문서입니다"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_BLOCK_HINT">"테두리를 조정하세요"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_CROPPING">"테두리가 문서의 모서리와 일치하도록 배치되어 있습니까?"</string>
+    <string name="SCREEN_C_BOTTOM_STATE_READABLE">"모든 것이 명확하고 읽을 수 있습니까?"</string>
+    <string name="SCREEN_C_HINT_SCAN_RESULT_CROP">"모서리를 오른쪽 위치로 끌어 테두리를 조정하세요"</string>
+    <string name="SCREEN_C_NAV_TITLE">"결과 확인"</string>
+    <string name="SCREEN_D_E_NAV_TITLE_COUNTRY">"1단계: 국가 선택"</string>
+    <string name="SCREEN_D_E_SEARCH_NO_RESULT">"\"%s\"에 대한 결과가 없습니다"</string>
+    <string name="SCREEN_D_E_SEARCH_PLACEHOLDER">"검색"</string>
+    <string name="SCREEN_D_HEADING_ALL_COUNTRIES">"모든 국가"</string>
+    <string name="SCREEN_D_HEADING_SUGGESTED_COUNTRY">"권장 국가"</string>
+    <string name="SCREEN_E_J_LABEL_SAMPLE_DOC">"예시 문서"</string>
+    <string name="SCREEN_E_NAV_TITLE_DOC_TYPE">"2단계: 문서 유형 선택"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_CHECK">"결과 확인"</string>
+    <string name="SCREEN_F_BOTTOM_STATE_PROTECT_HINT">"민감한 정보를 보호하세요"</string>
+    <string name="SCREEN_F_G_HINT_SENSITIVE_DATA">"민감한 정보는 모두 선을 그어 가리세요"</string>
+    <string name="SCREEN_F_G_NAV_TITLE">"개인 정보 가리기"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_MRZ_READ_FAIL">"코드를 읽지 못했습니다"</string>
+    <string name="SCREEN_H_BOTTOM_STATE_NOT_VALID">"이 문서는 유효하지 않습니다"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_INSTRUCTIONS">"코드가 손가락이나 먼지로 가려지지 않도록 해 주세요\n\n빛 반사가 너무 심하지 않은지 확인하세요"</string>
+    <string name="SCREEN_H_BOTTOM_TEXTAREA_NOT_VALID_INSTRUCTIONS">"스캔하신 문서는 허용되는 문서 목록에 포함되지 않습니다\n\n다른 문서를 사용해 주세요"</string>
+    <string name="SCREEN_H_NAV_TITLE">"코드를 읽을 수 없습니다"</string>
+    <string name="SCREEN_H_NAV_TITLE_NOT_VALID">"문서가 유효하지 않습니다"</string>
+    <string name="SCREEN_J_BOTTOM_STATE_DOC_TYPE">"귀하의 문서와 가장 유사한 예시 문서를 선택해 주세요"</string>
+    <string name="SCREEN_J_INSTR_INSTRUCTIONS">"목록에서 정부가 발행하는 여러 예시 문서를 볼 수 있습니다. 보이는 바에 따라 본인의 문서와 가장 유사한 문서를 선택해 주세요.\n\n여러 문서가 서로 구별되지 않을 수 있습니다. 이 경우 예시 문서 아래에 있는 표기를 주의 깊게 살펴보고 가장 적합한 것을 선택하세요."</string>
+    <string name="SCREEN_J_INSTR_NAV_TITLE">"문서 선택 도움"</string>
+    <string name="SCREEN_J_NAV_TITLE">"문서 선택"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"핸드폰 뒷면에 카드를 둔 채 쥐고 핸드폰이 진동할 때까지 천천히 움직여 주세요"</string>
+    <string name="SCREEN_K_2_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"핸드폰 뒷면에 카드를 둔 채 쥐고 핸드폰이 진동할 때까지 천천히 움직여 주세요"</string>
+    <string name="SCREEN_K_ACTIONSHEET_COMPLETE">"읽기가 완료되었습니다, 데이터를 불러오고 있습니다…"</string>
+    <string name="SCREEN_K_ACTIONSHEET_HOLD_INSTRUCTION">"카드나 여권을 핸드폰 뒷면에 둔 채 쥐고 핸드폰이 진동할 때까지 천천히 움직여 주세요"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_ANDROID">"핸드폰 뒷면에 여권을 둔 채 쥐고 핸드폰이 진동할 때까지 천천히 움직여 주세요"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_HOLD_INSTRUCTION_IOS">"핸드폰 뒷면에 여권을 둔 채 쥐고 핸드폰이 진동할 때까지 천천히 움직여 주세요"</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_ANDROID">"칩의 모든 데이터를 읽을 때까지 기다리세요. 몇 초 정도 걸릴 수 있습니다."</string>
+    <string name="SCREEN_K_BOTTOM_BODY_READING_IOS">"칩의 모든 데이터를 읽을 때까지 기다리세요. 최대 30초가 걸릴 수 있습니다."</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECTING">"연결 중…"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_CONNECT_TO_READER">"블루투스 NFC 판독기에 연결하세요"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_ANDROID">"문서를 휴대폰에 올려 두세요"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_HOLD_INSTRUCTION_IOS">"문서를 판독기에 올려 두세요"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_LOST">"문서와의 연결이 끊어졌습니다"</string>
+    <string name="SCREEN_K_BOTTOM_STATE_READING">"칩을 읽고 있습니다…"</string>
+    <string name="SCREEN_K_HINT_HOLD_STEADY">"흔들리지 않게 잡으세요"</string>
+    <string name="SCREEN_K_NAV_TITLE">"NFC 스캔"</string>
+    <string name="SCREEN_O1_HEADER">"문서에 MRZ(기계 판독 영역)가 있습니까?\n\nMRZ는 이렇게 생겼습니다:"</string>
+    <string name="SCREEN_O2_HEADER">"문서를 사진으로 찍으세요"</string>
+    <string name="SCREEN_O2_INSTRUCTION_LABEL">"다음과 같은 코드가 있는 문서 면을 사진으로 찍으세요:"</string>
+    <string name="SCREEN_O2_O5_SCAN_INSTRUCTIONS">"다음 사항을 확인하세요.\n- 문서 전체가 테두리 안에 있습니다.\n- 방이 밝습니다.\n- 문서에 빛이 반사되는 부분이 없습니다."</string>
+    <string name="SCREEN_O3_1_HEADER">"휴대폰을 여권 위에 놓으세요"</string>
+    <string name="SCREEN_O3_1_SCAN_INSTRUCTIONS">"문서 내 칩을 스캔하려면\n\n1. 문서를 준비합니다.\n\n2. 시작하기를 누릅니다.\n\n3. 진동을 느낄 때까지 핸드폰의 상부 뒤쪽을 여권 위에 둡니다.\n\n4. 그 다음 가만히 쥐고 진행 막대기가 완료에 이를 때까지 기다립니다."</string>
+    <string name="SCREEN_O3_2_HEADER">"휴대폰을 카드 위에 놓으세요"</string>
+    <string name="SCREEN_O3_2_SCAN_INSTRUCTIONS">"문서 내 칩을 스캔하려면\n\n1. 문서를 준비합니다.\n\n2. 시작하기를 누릅니다.\n\n3. 진동을 느낄 때까지 핸드폰의 상부 뒤쪽을 카드 위에 둡니다.\n\n4. 그 다음 가만히 쥐고 진행 막대기가 완료에 이를 때까지 기다립니다."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_INSTRUCTIONS">"문서 내 칩을 스캔하려면\n\n- 지시가 있을 때까지 휴대폰을 문서에 놓지 마십시오.\n\n- 지시에 따라 휴대폰의 뒷면을 문서 위에 놓습니다.\n\n- 진동이 느껴질 때까지 문서를 부드럽게 움직입니다. 그 다음 꽉 잡으세요.\n\n- 성공하지 못한 경우 핸드폰을 문서에서 들어 올린 후 다시 시도하세요."</string>
+    <string name="SCREEN_O3_2_SCAN_UNSUCCESSFUL_TITLE">"스캔 실패"</string>
+    <string name="SCREEN_O5_INSTRUCTION_LABEL">"카메라 앞에 문서를 놓으세요. 문서가 인식되면 사진이 자동으로 촬영됩니다."</string>
+    <string name="UNKNOWN_DOCUMENT">"알려지지 않은 문서"</string>
+    <string name="VISA">"비자"</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"홈으로 이동"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"위로 이동"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"추가 옵션"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"완료"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"전체 보기"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"앱 선택"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"사용 중지"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"사용"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"스페이스바"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"검색..."</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"검색어 삭제"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"검색어"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"검색"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"검색어 보내기"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"음성 검색"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"공유 대상:"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>과(와) 공유"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"접기"</string>
+    <string msgid="406453423630273620" name="close_drawer">"탐색 메뉴 닫기"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"시트 닫기"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"사용 설정"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Google Play 서비스를 사용하도록 설정해야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 작동합니다."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play 서비스 사용"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"설치"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"기기에 Google Play 서비스가 설치되어 있어야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play 서비스 설치"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play 서비스 사용 가능 여부"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play 서비스 오류"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>에서 Google Play 서비스를 사용하는 데 문제가 있습니다. 다시 시도하세요."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>은(는) Google Play 서비스 없이는 실행되지 않으나, 기기에서 Google Play 서비스를 지원하지 않습니다."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"업데이트"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Google Play 서비스를 업데이트해야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play 서비스 업데이트"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"현재 업데이트 중인 Google Play 서비스가 있어야 <ns1:g id="APP_NAME">%1$s</ns1:g>이(가) 실행됩니다."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"새 버전의 Google Play 서비스가 필요합니다. 곧 자동으로 업데이트됩니다."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"스마트폰에서 열기"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"로그인"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"입력이 잘못됨"</string>
+    <string msgid="6827826412747255547" name="in_progress">"진행 중"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"선택 또는 선택 해제되지 않음"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"탐색 메뉴"</string>
+    <string msgid="6610465462668679431" name="not_selected">"선택되지 않음"</string>
+    <string msgid="875452955155264703" name="off">"꺼짐"</string>
+    <string msgid="8655164131929253426" name="on">"켜짐"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"검색"</string>
+    <string msgid="6043586758067023" name="selected">"선택됨"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"탭"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g>퍼센트"</string>
+</resources>
