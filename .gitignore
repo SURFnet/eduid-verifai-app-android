@@ -15,3 +15,5 @@
 .externalNativeBuild
 /gradle.properties
 /app/build
+.idea/gradle.xml
+.idea/compiler.xml
