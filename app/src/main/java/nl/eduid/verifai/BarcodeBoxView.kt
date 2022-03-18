@@ -22,8 +22,8 @@ class BarcodeBoxView(
         val cornerRadius = 10f
 
         paint.style = Paint.Style.STROKE
-        paint.color = Color.RED
-        paint.strokeWidth = 5f
+        paint.color = Color.GREEN
+        paint.strokeWidth = 10f
 
         canvas?.drawRoundRect(mRect, cornerRadius, cornerRadius, paint)
     }
