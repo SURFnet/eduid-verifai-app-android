@@ -10,6 +10,7 @@
     <uses-permission android:name="android.hardware.camera.autofocus" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:installLocation="auto"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -26,15 +27,12 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="test.eduid.nl"
                     android:path="/verifai"
@@ -42,25 +40,10 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
-                    android:host="test2.eduid.nl"
-                    android:path="/verifai"
-                    android:scheme="https" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="eduid.nl"
-                    android:path="/verifai"
-                    android:scheme="https" />
+                    android:scheme="verifai" />
             </intent-filter>
         </activity>
         <activity

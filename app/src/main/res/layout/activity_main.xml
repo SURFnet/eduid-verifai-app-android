@@ -24,7 +24,8 @@
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:onClick="startQRCode"
-            android:text="@string/scan_qrcode" />
+            android:text="@string/scan_qrcode"
+            tools:ignore="TextContrastCheck" />
 
         <com.verifai.core.flow.views.uiComponents.buttons.VerifaiPositiveButton
             android:id="@+id/verifaiPositiveButton2"
@@ -34,7 +35,8 @@
             android:layout_marginEnd="16dp"
             android:gravity="center"
             android:onClick="startVerifai"
-            android:text="@string/new_scan" />
+            android:text="@string/new_scan"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

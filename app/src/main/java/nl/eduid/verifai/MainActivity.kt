@@ -1,16 +1,31 @@
 package nl.eduid.verifai
 
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.extensions.jsonBody
+
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.Serializable
+
 import com.verifai.core.Verifai
 import com.verifai.core.VerifaiConfiguration
 import com.verifai.core.exceptions.LicenceNotValidException
 import com.verifai.core.listeners.VerifaiResultListener
 import com.verifai.core.result.VerifaiResult
+
 import nl.eduid.verifai.databinding.ActivityMainBinding
+
+@Serializable
+data class Message(
+    val id: String,
+    val uid: String,
+    val state: String,
+    val svs: String
+)
 
 /**
  * The MainActivity of this SDK example
@@ -25,8 +40,11 @@ import nl.eduid.verifai.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var token: String? = null
-
+    private var host: String? = null
+    private var scheme: String? = null
+    private var server: String? = null
+    private var path: String? = null
+    private var id: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,15 +54,37 @@ class MainActivity : AppCompatActivity() {
         // Handle app links.
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
-            val appLinkData = appLinkIntent.data
-            if (appLinkData!!.getQueryParameter("scan") == "true") {
-                token = appLinkData.getQueryParameter("token")
-                Log.i("info", "Started with token $token")
-                startVerifai(binding.root)
-            }
+        val appLinkData = appLinkIntent.data!!
+            host = appLinkData.host
+            scheme = host?.substringBefore('.')
+            server = host?.substringAfter('.')
+            path = appLinkData.path
+            id = appLinkData.getQueryParameter("id")
+            Log.i("info", "Started with host $host")
+            Log.i("info", "Started with scheme $scheme")
+            Log.i("info", "Started with server $server")
+            Log.i("info", "Started with path $path")
+            Log.i("info", "Started with id $id")
+            val uri = "$scheme://$server$path"
+            val data = Message(id.toString(), "martin", "started", "SUCCEEDED")
+            val msg = Json.encodeToString(Message.serializer(), data)
+            Log.i("info", "Generated URL $uri")
+            Log.i("info", "Generated message $msg")
+
+            Fuel.post("http://192.168.1.113/saml/module.php/verifai/callback.php")
+                .jsonBody(msg)
+                .response { request, response, result ->
+                    Log.i("info", "Request: $request")
+                    Log.i("info", "Response: $response")
+                    val (bytes, error) = result
+                    Log.i("info", "Result: ${bytes?.let { String(it) }}")
+                    Log.i("info", "Error: $error")
+                }
+            startVerifai(binding.root)
         }
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun startQRCode(view: View) {
         val intent = Intent(this, QRCodeActivity::class.java)
         startActivity(intent)
