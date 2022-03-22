@@ -1,13 +1,17 @@
 package nl.eduid.verifai
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.mlkit.vision.common.InputImage
 import android.graphics.Rect
 import android.graphics.RectF
-import android.content.Context
-import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 
@@ -51,13 +55,6 @@ class QRCodeAnalyzer (
                 .addOnSuccessListener { barcodes ->
                     if (barcodes.isNotEmpty()) {
                         for (barcode in barcodes) {
-                            // Handle received barcodes...
-                            Toast.makeText(
-                                context,
-                                "Value: " + barcode.rawValue,
-                                Toast.LENGTH_SHORT
-                            )
-                                .show()
                             // Update bounding rect
                             barcode.boundingBox?.let { rect ->
                                 barcodeBoxView.setRect(
@@ -66,6 +63,9 @@ class QRCodeAnalyzer (
                                     )
                                 )
                             }
+
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(barcode.rawValue))
+                            context.startActivity(intent)
                         }
                     } else {
                         // Remove bounding rect

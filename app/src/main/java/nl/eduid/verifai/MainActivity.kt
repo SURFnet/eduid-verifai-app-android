@@ -40,10 +40,7 @@ data class Message(
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var host: String? = null
-    private var scheme: String? = null
-    private var server: String? = null
-    private var path: String? = null
+    private var uri: String? = null
     private var id: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,26 +49,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         // Handle app links.
+        Log.d("Verifai", "intent: " + intent.toString())
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
-        val appLinkData = appLinkIntent.data!!
-            host = appLinkData.host
-            scheme = host?.substringBefore('.')
-            server = host?.substringAfter('.')
-            path = appLinkData.path
+            val appLinkData = appLinkIntent.data!!
+            val host = appLinkData.host
+            val scheme = host?.substringBefore('.')
+            val server = host?.substringAfter('.')
+            val path = appLinkData.path
             id = appLinkData.getQueryParameter("id")
+            uri = "$scheme://$server$path"
             Log.i("info", "Started with host $host")
             Log.i("info", "Started with scheme $scheme")
             Log.i("info", "Started with server $server")
             Log.i("info", "Started with path $path")
             Log.i("info", "Started with id $id")
-            val uri = "$scheme://$server$path"
             val data = Message(id.toString(), "martin", "started", "SUCCEEDED")
             val msg = Json.encodeToString(Message.serializer(), data)
             Log.i("info", "Generated URL $uri")
             Log.i("info", "Generated message $msg")
 
-            Fuel.post("http://192.168.1.113/saml/module.php/verifai/callback.php")
+            Fuel.post(uri.toString())
                 .jsonBody(msg)
                 .response { request, response, result ->
                     Log.i("info", "Request: $request")
@@ -80,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     Log.i("info", "Result: ${bytes?.let { String(it) }}")
                     Log.i("info", "Error: $error")
                 }
+            //intent.action = Intent.ACTION_DEFAULT
             startVerifai(binding.root)
         }
     }
@@ -105,22 +104,36 @@ class MainActivity : AppCompatActivity() {
         Verifai.configure(getVerifaiConfiguration())
         Verifai.startScan(this@MainActivity, object : VerifaiResultListener {
             override fun onSuccess(result: VerifaiResult) {
-                verifaiResult = result
-                val intent = Intent(this@MainActivity, VerifaiResultActivity::class.java)
+                Log.d("Verifai", "Success")
+                Log.d("Verifai", "result: " + result.toString())
+                if (result.document != null) {
+                    Log.d("Verifai","result.document != null")
+                    val intent = Intent(this@MainActivity, VerifaiResultActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Log.d("Verifai","result.document == null")
+                    val intent = Intent(this@MainActivity, MainActivity::class.java)
+                    intent.action = Intent.ACTION_MAIN
+                    startActivity(intent)
+                }
+            }
+            override fun onCanceled() {
+                Log.d("Verifai", "Cancel")
+                val intent = Intent(this@MainActivity, MainActivity::class.java)
+                intent.action = Intent.ACTION_MAIN
+                startActivity(intent)
+            }
+            override fun onError(e: Throwable) {
+                // We are sorry, something wrong happened.
+                Log.d("Verifai", "Error")
+                if (e is LicenceNotValidException) {
+                    Log.d("Verifai", "Authentication failed")
+                }
+                val intent = Intent(this@MainActivity, MainActivity::class.java)
+                intent.action = Intent.ACTION_DEFAULT
                 startActivity(intent)
             }
 
-            override fun onCanceled() {
-                Log.d("Verifai", "Cancel")
-                // Return to the main app
-            }
-
-            override fun onError(e: Throwable) {
-                // We are sorry, something wrong happened.
-                if (e is LicenceNotValidException) {
-                    Log.d("Authentication", "Authentication failed")
-                }
-            }
         })
     }
 

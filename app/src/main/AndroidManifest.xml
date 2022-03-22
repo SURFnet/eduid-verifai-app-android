@@ -49,6 +49,9 @@
         <activity
             android:name=".GeneralResultActivity"
             android:exported="true" />
+        <activity
+            android:name=".VerifaiResultActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -12,9 +12,10 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.camera.core.Preview
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import nl.eduid.verifai.databinding.ActivityQrcodeBinding // viewBinding magic!
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+
+import nl.eduid.verifai.databinding.ActivityQrcodeBinding // viewBinding magic!
 
 class QRCodeActivity : AppCompatActivity() {
 
