@@ -3,6 +3,7 @@ package nl.eduid.verifai
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.util.Log
 import android.view.View
 import com.github.kittinunf.fuel.Fuel
@@ -10,6 +11,8 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.Serializable
+//import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 import com.verifai.core.Verifai
 import com.verifai.core.VerifaiConfiguration
@@ -19,13 +22,36 @@ import com.verifai.core.result.VerifaiResult
 
 import nl.eduid.verifai.databinding.ActivityMainBinding
 
+
 @Serializable
 data class Message(
-    val id: String,
     val uid: String,
     val state: String,
     val svs: String
-)
+) {
+    var id: String? = null
+}
+
+@Parcelize
+class Server(
+    private val id: String,
+    private val uri: String
+) : Parcelable {
+    fun sendMessage(data: Message) {
+        data.id = id
+        val msg = Json.encodeToString(Message.serializer(), data)
+        Fuel.post(uri.toString())
+            .jsonBody(msg)
+            .response { request, response, result ->
+                Log.i("info", "Request: $request")
+                Log.i("info", "Response: $response")
+                val (bytes, error) = result
+                Log.i("info", "Result: ${bytes?.let { String(it) }}")
+                Log.i("info", "Error: $error")
+            }
+
+    }
+}
 
 /**
  * The MainActivity of this SDK example
@@ -40,8 +66,7 @@ data class Message(
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var uri: String? = null
-    private var id: String? = null
+    private lateinit var server: Server
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,30 +80,19 @@ class MainActivity : AppCompatActivity() {
             val appLinkData = appLinkIntent.data!!
             val host = appLinkData.host
             val scheme = host?.substringBefore('.')
-            val server = host?.substringAfter('.')
+            val fqdn = host?.substringAfter('.')
             val path = appLinkData.path
-            id = appLinkData.getQueryParameter("id")
-            uri = "$scheme://$server$path"
-            Log.i("info", "Started with host $host")
-            Log.i("info", "Started with scheme $scheme")
-            Log.i("info", "Started with server $server")
-            Log.i("info", "Started with path $path")
-            Log.i("info", "Started with id $id")
-            val data = Message(id.toString(), "martin", "started", "SUCCEEDED")
-            val msg = Json.encodeToString(Message.serializer(), data)
-            Log.i("info", "Generated URL $uri")
-            Log.i("info", "Generated message $msg")
+            val id = appLinkData.getQueryParameter("id")
+            val uri = "$scheme://$fqdn$path"
+            server = Server(id!!, uri)
 
-            Fuel.post(uri.toString())
-                .jsonBody(msg)
-                .response { request, response, result ->
-                    Log.i("info", "Request: $request")
-                    Log.i("info", "Response: $response")
-                    val (bytes, error) = result
-                    Log.i("info", "Result: ${bytes?.let { String(it) }}")
-                    Log.i("info", "Error: $error")
-                }
-            //intent.action = Intent.ACTION_DEFAULT
+            server.sendMessage(
+                Message(
+                    "martin",
+                    "started",
+                    "FAILED")
+            )
+
             startVerifai(binding.root)
         }
     }
@@ -108,7 +122,9 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Verifai", "result: " + result.toString())
                 if (result.document != null) {
                     Log.d("Verifai","result.document != null")
+                    verifaiResult = result
                     val intent = Intent(this@MainActivity, VerifaiResultActivity::class.java)
+                    intent.putExtra("SERVER", server)
                     startActivity(intent)
                 } else {
                     Log.d("Verifai","result.document == null")
@@ -119,9 +135,13 @@ class MainActivity : AppCompatActivity() {
             }
             override fun onCanceled() {
                 Log.d("Verifai", "Cancel")
-                val intent = Intent(this@MainActivity, MainActivity::class.java)
-                intent.action = Intent.ACTION_MAIN
-                startActivity(intent)
+                server.sendMessage(
+                    Message(
+                        "martin",
+                        "canceled",
+                        "FAILED"
+                    )
+                )
             }
             override fun onError(e: Throwable) {
                 // We are sorry, something wrong happened.

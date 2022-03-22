@@ -18,13 +18,22 @@ import com.verifai.nfc.VerifaiNfc
 import com.verifai.nfc.VerifaiNfcResultListener
 import com.verifai.nfc.result.VerifaiNfcResult
 
+
 class VerifaiResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVerifaiResultBinding
+    private lateinit var server: Server
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        server = intent.getParcelableExtra<Server>("SERVER")!!
+        server.sendMessage(
+            Message(
+                "martin",
+                "scanned",
+                "FAILED"))
 
         binding = ActivityVerifaiResultBinding.inflate(layoutInflater)
+
         val view = binding.root
         setContentView(view)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -33,17 +42,26 @@ class VerifaiResultActivity : AppCompatActivity() {
          * Start the NFC process based on the scan result.
          */
         binding.contentResult.startNfcButton.setOnClickListener {
+            Log.d("Verifai", "Nfc Start")
             val nfcListener = object : VerifaiNfcResultListener {
                 override fun onResult(result: VerifaiNfcResult) {
-                    Verifai.logger?.log("NFC completed"+result.mrzData.toString())
+                    server.sendMessage(
+                        Message(
+                            "martin",
+                            "nfc ok",
+                            "FAILED"
+                        )
+                    )
+                    Log.d("Verifai", "NFC completed" + result.mrzData.toString())
                 }
 
                 override fun onCanceled() {
-                    Verifai.logger?.log("NFC has been canceled")
+                    Log.d("Verifai", "NFC Cancel")
                 }
 
                 override fun onError(e: Throwable) {
                     e.printStackTrace()
+                    Log.d("Verifai", "NFC Error")
                 }
             }
 
@@ -57,11 +75,19 @@ class VerifaiResultActivity : AppCompatActivity() {
          * face match the liveness check can also run separately.
          */
         binding.contentResult.startLivenessButton.setOnClickListener {
+            server.sendMessage(
+                Message(
+                    "martin",
+                    "start liveness",
+                    "FAILED"
+                )
+            )
             VerifaiLiveness.clear(this)
             VerifaiLiveness.start(this,
                 arrayListOf(
-                    FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
-                    CloseEyes(this), Tilt(this, -25)
+                    CloseEyes(this),
+                    //FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
+                    //Tilt(this, -25)
                 ), object : VerifaiLivenessCheckListener {
                     override fun onResult(results: VerifaiLivenessCheckResults) {
                         Log.d(TAG, "Done")
@@ -75,10 +101,22 @@ class VerifaiResultActivity : AppCompatActivity() {
                                 }
                             }
                         }
+                        server.sendMessage(
+                            Message(
+                                "martin",
+                                "liveness ok",
+                                "FAILED")
+                        )
                     }
 
                     override fun onError(e: Throwable) {
                         e.printStackTrace()
+                        server.sendMessage(
+                            Message(
+                                "martin",
+                                "liveness bad",
+                                "FAILED")
+                        )
                     }
                 }
             )
@@ -87,6 +125,15 @@ class VerifaiResultActivity : AppCompatActivity() {
         binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
         binding.contentResult.firstNameValue.text = MainActivity.verifaiResult?.mrzData?.firstName
         binding.contentResult.lastNameValue.text = MainActivity.verifaiResult?.mrzData?.lastName
+
+        server.sendMessage(
+            Message(
+                MainActivity.verifaiResult?.mrzData?.firstName.toString(),
+                "finished",
+                "SUCCESS"
+            )
+        )
+        Log.d("Verifai", "Scan completed firstname: " + MainActivity.verifaiResult?.mrzData?.firstName.toString())
 
         MainActivity.verifaiResult?.visualInspectionZoneResult.also { map ->
             binding.vizDetailsBtn.setOnClickListener {
