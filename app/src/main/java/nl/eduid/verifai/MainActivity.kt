@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
         return VerifaiConfiguration(
             show_instruction_screens = true,
             enableVisualInspection = true,
-            require_document_copy = false,
+            require_document_copy = true,
             require_mrz_contents = true,
             //read_mrz_contents = true,
             require_nfc_when_available = false,
