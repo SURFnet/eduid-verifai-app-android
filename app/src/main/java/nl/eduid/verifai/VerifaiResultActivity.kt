@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.verifai.core.Verifai
-import nl.eduid.verifai.databinding.ActivityVerifaiResultBinding
 import com.verifai.liveness.VerifaiLiveness
 import com.verifai.liveness.VerifaiLivenessCheckListener
 import com.verifai.liveness.checks.CloseEyes
@@ -18,19 +16,19 @@ import com.verifai.nfc.VerifaiNfc
 import com.verifai.nfc.VerifaiNfcResultListener
 import com.verifai.nfc.result.VerifaiNfcResult
 
+import nl.eduid.verifai.databinding.ActivityVerifaiResultBinding
 
 class VerifaiResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVerifaiResultBinding
     private lateinit var server: Server
+    private lateinit var msg: Message
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         server = intent.getParcelableExtra<Server>("SERVER")!!
-        server.sendMessage(
-            Message(
-                "martin",
-                "scanned",
-                "FAILED"))
+
+        msg = Message("scanned")
+        server.sendMessage(msg)
 
         binding = ActivityVerifaiResultBinding.inflate(layoutInflater)
 
@@ -38,33 +36,69 @@ class VerifaiResultActivity : AppCompatActivity() {
         setContentView(view)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val nfcListener = object : VerifaiNfcResultListener {
+            override fun onResult(result: VerifaiNfcResult) {
+                Log.d(TAG, "NFC completed" + result.mrzData.toString())
+
+                binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
+
+                msg.gn = result.mrzData?.firstName
+                msg.sn = result.mrzData?.lastName
+                msg.dob = result.mrzData?.dateOfBirth.toString()
+                binding.contentResult.firstNameValue.text = msg.gn
+                binding.contentResult.lastNameValue.text = msg.sn
+
+//                    msg.state = "nfc_ok"
+                msg.uid = msg.gn  // What should uid be set to?
+                msg.state = "finished" // So we can continue without liveness
+                msg.svs = "SUCCESS" // This is too early, for debugging
+                server.sendMessage(msg)
+            }
+
+            override fun onCanceled() {
+                Log.d(TAG, "NFC Cancel")
+            }
+
+            override fun onError(e: Throwable) {
+                e.printStackTrace()
+                Log.d(TAG, "NFC Error")
+            }
+        }
+
+        val livenessCheckListener = object : VerifaiLivenessCheckListener {
+            override fun onResult(results: VerifaiLivenessCheckResults) {
+                Log.d(TAG, "Done")
+                for (result in results.resultList) {
+                    Log.d(TAG, "%s finished".format(result.check.instruction))
+                    Log.d(TAG, "%s status".format(result.status))
+                    if (result is VerifaiFaceMatchingCheckResult) {
+                        Log.d(TAG, "Face match?: ${result.match}")
+                        result.confidence?.let {
+                            Log.d(TAG, "Face match confidence ${(it * 100).toInt()}%")
+                        }
+                    }
+                }
+
+                msg.state = "liveness ok"
+                msg.svs = "SUCCESS"
+                server.sendMessage(msg)
+            }
+
+            override fun onError(e: Throwable) {
+                e.printStackTrace()
+
+                msg.state = "liveness bad"
+                server.sendMessage(msg)
+            }
+        }
+
         /**
          * Start the NFC process based on the scan result.
          */
         binding.contentResult.startNfcButton.setOnClickListener {
             Log.d("Verifai", "Nfc Start")
-            val nfcListener = object : VerifaiNfcResultListener {
-                override fun onResult(result: VerifaiNfcResult) {
-                    server.sendMessage(
-                        Message(
-                            "martin",
-                            "nfc ok",
-                            "FAILED"
-                        )
-                    )
-                    Log.d("Verifai", "NFC completed" + result.mrzData.toString())
-                }
-
-                override fun onCanceled() {
-                    Log.d("Verifai", "NFC Cancel")
-                }
-
-                override fun onError(e: Throwable) {
-                    e.printStackTrace()
-                    Log.d("Verifai", "NFC Error")
-                }
-            }
-
+            msg.state = "start nfc"
+            server.sendMessage(msg)
             MainActivity.verifaiResult?.let {
                 VerifaiNfc.start(this, it, true, nfcListener, true)
             }
@@ -75,65 +109,29 @@ class VerifaiResultActivity : AppCompatActivity() {
          * face match the liveness check can also run separately.
          */
         binding.contentResult.startLivenessButton.setOnClickListener {
-            server.sendMessage(
-                Message(
-                    "martin",
-                    "start liveness",
-                    "FAILED"
-                )
-            )
             VerifaiLiveness.clear(this)
             VerifaiLiveness.start(this,
                 arrayListOf(
                     CloseEyes(this),
                     //FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
                     //Tilt(this, -25)
-                ), object : VerifaiLivenessCheckListener {
-                    override fun onResult(results: VerifaiLivenessCheckResults) {
-                        Log.d(TAG, "Done")
-                        for (result in results.resultList) {
-                            Log.d(TAG, "%s finished".format(result.check.instruction))
-                            Log.d(TAG, "%s status".format(result.status))
-                            if (result is VerifaiFaceMatchingCheckResult) {
-                                Log.d(TAG, "Face match?: ${result.match}")
-                                result.confidence?.let {
-                                    Log.d(TAG, "Face match confidence ${(it * 100).toInt()}%")
-                                }
-                            }
-                        }
-                        server.sendMessage(
-                            Message(
-                                "martin",
-                                "liveness ok",
-                                "FAILED")
-                        )
-                    }
-
-                    override fun onError(e: Throwable) {
-                        e.printStackTrace()
-                        server.sendMessage(
-                            Message(
-                                "martin",
-                                "liveness bad",
-                                "FAILED")
-                        )
-                    }
-                }
+                ), livenessCheckListener
             )
         }
 
-        binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
-        binding.contentResult.firstNameValue.text = MainActivity.verifaiResult?.mrzData?.firstName
-        binding.contentResult.lastNameValue.text = MainActivity.verifaiResult?.mrzData?.lastName
 
-        server.sendMessage(
-            Message(
-                MainActivity.verifaiResult?.mrzData?.firstName.toString(),
-                "finished",
-                "SUCCESS"
-            )
-        )
-        Log.d("Verifai", "Scan completed firstname: " + MainActivity.verifaiResult?.mrzData?.firstName.toString())
+        msg.state = "scanned" // This triggers the end of the authpage waitloop
+        server.sendMessage(msg)
+        Log.d(TAG, "Scan completed")
+
+        //binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
+        //msg.dob = MainActivity.verifaiResult?.mrzData?.dateOfBirth.toString()
+        //msg.gn = MainActivity.verifaiResult?.mrzData?.firstName.toString()
+        //msg.sn = MainActivity.verifaiResult?.mrzData?.lastName.toString()
+
+        MainActivity.verifaiResult?.let {
+            VerifaiNfc.start(this, it, true, nfcListener, true)
+        }
 
         MainActivity.verifaiResult?.visualInspectionZoneResult.also { map ->
             binding.vizDetailsBtn.setOnClickListener {
@@ -152,6 +150,7 @@ class VerifaiResultActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val TAG = "RESULT_ACTIVITY"
+        private const val TAG = "Verifai result"
     }
+
 }

@@ -8,16 +8,16 @@
     tools:showIn="@layout/activity_verifai_result">
 
         <Button
-            android:id="@+id/startLivenessButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start Liveness" />
-
-        <Button
             android:id="@+id/startNfcButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Start NFC" />
+
+        <Button
+            android:id="@+id/startLivenessButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Liveness" />
 
         <TextView
             android:id="@+id/mrzValue"

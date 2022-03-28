@@ -21,15 +21,18 @@ import com.verifai.core.listeners.VerifaiResultListener
 import com.verifai.core.result.VerifaiResult
 
 import nl.eduid.verifai.databinding.ActivityMainBinding
+import java.util.Date
 
 
 @Serializable
-data class Message(
-    val uid: String,
-    val state: String,
-    val svs: String
-) {
+class Message(var state: String) {
     var id: String? = null
+    var uid: String? = null
+    var cn: String? = null
+    var gn: String? = null
+    var sn: String? = null
+    var dob: String? = null
+    var svs: String? = null
 }
 
 @Parcelize
@@ -43,11 +46,11 @@ class Server(
         Fuel.post(uri.toString())
             .jsonBody(msg)
             .response { request, response, result ->
-                Log.i("info", "Request: $request")
-                Log.i("info", "Response: $response")
                 val (bytes, error) = result
-                Log.i("info", "Result: ${bytes?.let { String(it) }}")
-                Log.i("info", "Error: $error")
+                Log.d("Verifai server", "Request: $request")
+                Log.d("Verifai server", "Response: $response")
+                Log.d("Verifai server", "Result: ${bytes?.let { String(it) }}")
+                Log.d("Verifai server", "Error: $error")
             }
 
     }
@@ -74,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         // Handle app links.
-        Log.d("Verifai", "intent: " + intent.toString())
+        Log.d(TAG, "intent: " + intent.toString())
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
             val appLinkData = appLinkIntent.data!!
@@ -86,12 +89,8 @@ class MainActivity : AppCompatActivity() {
             val uri = "$scheme://$fqdn$path"
             server = Server(id!!, uri)
 
-            server.sendMessage(
-                Message(
-                    "martin",
-                    "started",
-                    "FAILED")
-            )
+            val msg = Message("started")
+            server.sendMessage(msg)
 
             startVerifai(binding.root)
         }
@@ -118,36 +117,32 @@ class MainActivity : AppCompatActivity() {
         Verifai.configure(getVerifaiConfiguration())
         Verifai.startScan(this@MainActivity, object : VerifaiResultListener {
             override fun onSuccess(result: VerifaiResult) {
-                Log.d("Verifai", "Success")
-                Log.d("Verifai", "result: " + result.toString())
-                if (result.document != null) {
-                    Log.d("Verifai","result.document != null")
+                Log.d(TAG, "Success")
+                Log.d(TAG, "result: " + result.toString())
+                if (result.mrzData != null) {
+                    Log.d(TAG,"result.document != null")
                     verifaiResult = result
                     val intent = Intent(this@MainActivity, VerifaiResultActivity::class.java)
                     intent.putExtra("SERVER", server)
                     startActivity(intent)
                 } else {
-                    Log.d("Verifai","result.document == null")
+                    Log.d(TAG,"result.mrzData == null")
                     val intent = Intent(this@MainActivity, MainActivity::class.java)
                     intent.action = Intent.ACTION_MAIN
                     startActivity(intent)
                 }
             }
             override fun onCanceled() {
-                Log.d("Verifai", "Cancel")
-                server.sendMessage(
-                    Message(
-                        "martin",
-                        "canceled",
-                        "FAILED"
-                    )
-                )
+                Log.d(TAG, "Cancel")
+                val msg = Message("canceled")
+                msg.svs = "FAILED"
+                server.sendMessage(msg)
             }
             override fun onError(e: Throwable) {
                 // We are sorry, something wrong happened.
-                Log.d("Verifai", "Error")
+                Log.d(TAG, "Error")
                 if (e is LicenceNotValidException) {
-                    Log.d("Verifai", "Authentication failed")
+                    Log.d(TAG, "Authentication failed")
                 }
                 val intent = Intent(this@MainActivity, MainActivity::class.java)
                 intent.action = Intent.ACTION_DEFAULT
@@ -160,11 +155,18 @@ class MainActivity : AppCompatActivity() {
     private fun getVerifaiConfiguration(): VerifaiConfiguration {
         return VerifaiConfiguration(
             show_instruction_screens = true,
-            enableVisualInspection = true,
+            enableVisualInspection = false,
+            require_document_copy = false,
+            require_mrz_contents = true,
+            //read_mrz_contents = true,
+            require_nfc_when_available = true,
+            enable_post_cropping = false,
         )
     }
 
     companion object {
+        private const val TAG = "Verifai"
         var verifaiResult: VerifaiResult? = null
     }
+
 }
