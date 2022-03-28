@@ -27,8 +27,7 @@ class VerifaiResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         server = intent.getParcelableExtra<Server>("SERVER")!!
 
-        msg = Message("scanned")
-        server.sendMessage(msg)
+        msg = Message()
 
         binding = ActivityVerifaiResultBinding.inflate(layoutInflater)
 
@@ -87,7 +86,7 @@ class VerifaiResultActivity : AppCompatActivity() {
             override fun onError(e: Throwable) {
                 e.printStackTrace()
 
-                msg.state = "liveness bad"
+                msg.state = "liveness fail"
                 server.sendMessage(msg)
             }
         }
@@ -97,7 +96,7 @@ class VerifaiResultActivity : AppCompatActivity() {
          */
         binding.contentResult.startNfcButton.setOnClickListener {
             Log.d("Verifai", "Nfc Start")
-            msg.state = "start nfc"
+            msg.state = "start_nfc"
             server.sendMessage(msg)
             MainActivity.verifaiResult?.let {
                 VerifaiNfc.start(this, it, true, nfcListener, true)
@@ -109,6 +108,8 @@ class VerifaiResultActivity : AppCompatActivity() {
          * face match the liveness check can also run separately.
          */
         binding.contentResult.startLivenessButton.setOnClickListener {
+            msg.state = "start_liveness"
+            server.sendMessage(msg)
             VerifaiLiveness.clear(this)
             VerifaiLiveness.start(this,
                 arrayListOf(
@@ -119,17 +120,15 @@ class VerifaiResultActivity : AppCompatActivity() {
             )
         }
 
-
-        msg.state = "scanned" // This triggers the end of the authpage waitloop
-        server.sendMessage(msg)
-        Log.d(TAG, "Scan completed")
-
         //binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
         //msg.dob = MainActivity.verifaiResult?.mrzData?.dateOfBirth.toString()
         //msg.gn = MainActivity.verifaiResult?.mrzData?.firstName.toString()
         //msg.sn = MainActivity.verifaiResult?.mrzData?.lastName.toString()
 
         MainActivity.verifaiResult?.let {
+            msg.state = "start_nfc"
+            server.sendMessage(msg)
+
             VerifaiNfc.start(this, it, true, nfcListener, true)
         }
 

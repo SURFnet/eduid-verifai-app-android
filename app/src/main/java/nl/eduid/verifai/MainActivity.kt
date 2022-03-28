@@ -25,7 +25,7 @@ import java.util.Date
 
 
 @Serializable
-class Message(var state: String) {
+class Message(var state: String? = null) {
     var id: String? = null
     var uid: String? = null
     var cn: String? = null
@@ -70,11 +70,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var server: Server
+    private lateinit var msg: Message
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        msg = Message()
 
         // Handle app links.
         Log.d(TAG, "intent: " + intent.toString())
@@ -89,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             val uri = "$scheme://$fqdn$path"
             server = Server(id!!, uri)
 
-            val msg = Message("started")
+            msg.state = "start_verifai"
             server.sendMessage(msg)
 
             startVerifai(binding.root)
@@ -127,6 +129,8 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 } else {
                     Log.d(TAG,"result.mrzData == null")
+                    msg.state = "mrzData failed"
+                    server.sendMessage(msg)
                     val intent = Intent(this@MainActivity, MainActivity::class.java)
                     intent.action = Intent.ACTION_MAIN
                     startActivity(intent)
@@ -144,6 +148,8 @@ class MainActivity : AppCompatActivity() {
                 if (e is LicenceNotValidException) {
                     Log.d(TAG, "Authentication failed")
                 }
+                msg.state = "error"
+                server.sendMessage(msg)
                 val intent = Intent(this@MainActivity, MainActivity::class.java)
                 intent.action = Intent.ACTION_DEFAULT
                 startActivity(intent)
@@ -159,7 +165,7 @@ class MainActivity : AppCompatActivity() {
             require_document_copy = false,
             require_mrz_contents = true,
             //read_mrz_contents = true,
-            require_nfc_when_available = true,
+            require_nfc_when_available = false,
             enable_post_cropping = false,
         )
     }
