@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
     private fun getVerifaiConfiguration(): VerifaiConfiguration {
         return VerifaiConfiguration(
             show_instruction_screens = true,
-            enableVisualInspection = false,
+            enableVisualInspection = true,
             require_document_copy = false,
             require_mrz_contents = true,
             //read_mrz_contents = true,

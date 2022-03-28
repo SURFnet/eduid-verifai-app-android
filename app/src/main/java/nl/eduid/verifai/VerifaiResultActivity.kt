@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.verifai.liveness.LivenessCheckStatus
 import com.verifai.liveness.VerifaiLiveness
 import com.verifai.liveness.VerifaiLivenessCheckListener
 import com.verifai.liveness.checks.CloseEyes
@@ -47,10 +48,10 @@ class VerifaiResultActivity : AppCompatActivity() {
                 binding.contentResult.firstNameValue.text = msg.gn
                 binding.contentResult.lastNameValue.text = msg.sn
 
-//                    msg.state = "nfc_ok"
+//                msg.state = "finished" // So we can continue without liveness
+                msg.state = "nfc_ok"
                 msg.uid = msg.gn  // What should uid be set to?
-                msg.state = "finished" // So we can continue without liveness
-                msg.svs = "SUCCESS" // This is too early, for debugging
+                //msg.svs = "SUCCESS" // This is too early, for debugging
                 server.sendMessage(msg)
             }
 
@@ -66,8 +67,10 @@ class VerifaiResultActivity : AppCompatActivity() {
 
         val livenessCheckListener = object : VerifaiLivenessCheckListener {
             override fun onResult(results: VerifaiLivenessCheckResults) {
+                var success: Boolean = true
                 Log.d(TAG, "Done")
                 for (result in results.resultList) {
+                    if (result.status != LivenessCheckStatus.SUCCESS) success = false
                     Log.d(TAG, "%s finished".format(result.check.instruction))
                     Log.d(TAG, "%s status".format(result.status))
                     if (result is VerifaiFaceMatchingCheckResult) {
@@ -77,10 +80,12 @@ class VerifaiResultActivity : AppCompatActivity() {
                         }
                     }
                 }
+                if (success) {
+                    msg.state = "finished"
+                    msg.svs = "SUCCESS"
+                    server.sendMessage(msg)
+                }
 
-                msg.state = "liveness ok"
-                msg.svs = "SUCCESS"
-                server.sendMessage(msg)
             }
 
             override fun onError(e: Throwable) {
