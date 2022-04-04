@@ -19,3 +19,4 @@
 /app/build
 .idea/gradle.xml
 .idea/compiler.xml
+keystore.jks

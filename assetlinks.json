@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "nl.eduid.verifai",
+    "sha256_cert_fingerprints":
+    ["4A:BA:E4:3B:6F:A5:97:22:26:78:3D:31:4E:7D:2B:D8:39:29:2C:5A:8F:59:87:83:86:D0:76:48:2B:66:0C:1E"]
+  }
+}]

@@ -38,12 +38,12 @@ class Message(var state: String? = null) {
 @Parcelize
 class Server(
     private val id: String,
-    private val uri: String
+    private val db: String
 ) : Parcelable {
     fun sendMessage(data: Message) {
         data.id = id
         val msg = Json.encodeToString(Message.serializer(), data)
-        Fuel.post(uri.toString())
+        Fuel.post(db.toString())
             .jsonBody(msg)
             .response { request, response, result ->
                 val (bytes, error) = result
@@ -83,13 +83,9 @@ class MainActivity : AppCompatActivity() {
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
             val appLinkData = appLinkIntent.data!!
-            val host = appLinkData.host
-            val scheme = host?.substringBefore('.')
-            val fqdn = host?.substringAfter('.')
-            val path = appLinkData.path
+            val cb = appLinkData.getQueryParameter("cb")
             val id = appLinkData.getQueryParameter("id")
-            val uri = "$scheme://$fqdn$path"
-            server = Server(id!!, uri)
+            server = Server(id!!, cb!!)
 
             msg.state = "start_verifai"
             server.sendMessage(msg)
