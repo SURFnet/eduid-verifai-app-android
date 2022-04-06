@@ -6,8 +6,9 @@ ext {
 buildscript {
     ext.kotlin_version = '1.6.10'
     repositories {
+        mavenLocal()
+        mavenCentral()
         google()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
@@ -21,11 +22,12 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
+        mavenCentral()
         google()
-        jcenter()
-        maven {
-            url 'https://dashboard.verifai.com/downloads/sdk/maven'
-        }
+        maven { url 'https://dashboard.verifai.com/downloads/sdk/maven' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://repo.spring.io/plugins-release/" }
     }
 }
 

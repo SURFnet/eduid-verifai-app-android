@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -30,7 +31,10 @@ class QRCodeActivity : AppCompatActivity() {
 
         cameraExecutor = Executors.newSingleThreadExecutor()
         barcodeBoxView = BarcodeBoxView(this)
-        binding.constraintLayout.addView(barcodeBoxView, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        binding.constraintLayout.addView(barcodeBoxView,
+            ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT)
+        )
 
         checkCameraPermission()
     }
@@ -70,7 +74,8 @@ class QRCodeActivity : AppCompatActivity() {
      * Otherwise, it will raise an alert.
      */
     private fun checkIfCameraPermissionIsGranted() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             // Permission granted: start the preview
             startCamera()
         } else {
@@ -95,13 +100,17 @@ class QRCodeActivity : AppCompatActivity() {
      * This function is responsible for the setup of the camera preview and the image analyzer.
      */
     private fun startCamera() {
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+        val cameraProviderFuture = ProcessCameraProvider
+            .getInstance(this)
 
         cameraProviderFuture.addListener({
-            val cameraProvider = cameraProviderFuture.get()
+            val cameraProvider = cameraProviderFuture
+                .get()
 
             // Preview
             val preview = Preview.Builder()
+                //.setTargetResolution(Size(960,1280))
+                .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .build()
                 .also {
                     it.setSurfaceProvider(binding.qrPreview.surfaceProvider)
@@ -110,18 +119,19 @@ class QRCodeActivity : AppCompatActivity() {
             // Image analyzer
             val imageAnalyzer = ImageAnalysis.Builder()
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                .setTargetAspectRatio(AspectRatio.RATIO_4_3)
+                //.setTargetResolution(Size(960,1280))
                 .build()
-                .also {
-                    it.setAnalyzer(
-                        cameraExecutor,
-                        QRCodeAnalyzer(
-                            this,
-                            barcodeBoxView,
-                            binding.qrPreview.width.toFloat(),
-                            binding.qrPreview.height.toFloat()
-                        )
+            imageAnalyzer
+                .setAnalyzer(
+                    cameraExecutor,
+                    QRCodeAnalyzer(
+                        this,
+                        barcodeBoxView,
+                        binding.qrPreview.width.toFloat(),
+                        binding.qrPreview.height.toFloat()
                     )
-                }
+                )
 
             // Select back camera as a default
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
