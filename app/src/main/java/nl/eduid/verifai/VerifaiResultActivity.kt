@@ -130,14 +130,14 @@ class VerifaiResultActivity : AppCompatActivity() {
         //msg.dob = MainActivity.verifaiResult?.mrzData?.dateOfBirth.toString()
         //msg.gn = MainActivity.verifaiResult?.mrzData?.firstName.toString()
         //msg.sn = MainActivity.verifaiResult?.mrzData?.lastName.toString()
-
+/*
         MainActivity.verifaiResult?.let {
             msg.state = "start_nfc"
             server.sendMessage(msg)
 
             VerifaiNfc.start(this, it, true, nfcListener, true)
         }
-
+*/
         MainActivity.verifaiResult?.visualInspectionZoneResult.also { map ->
             binding.vizDetailsBtn.setOnClickListener {
                 val intent = Intent(this, GeneralResultActivity::class.java)
