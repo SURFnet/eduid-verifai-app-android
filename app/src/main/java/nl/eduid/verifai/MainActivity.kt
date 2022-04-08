@@ -118,6 +118,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "Success")
                 Log.d(TAG, "result: " + result.toString())
                 if (result.mrzData != null) {
+                    verifaiResult = result
                     Log.d(TAG,"result.document != null" + result.mrzData)
                     val intent = Intent(this@MainActivity, VerifaiResultActivity::class.java)
                     intent.putExtra("SERVER", server)
@@ -156,9 +157,9 @@ class MainActivity : AppCompatActivity() {
     private fun getVerifaiConfiguration(): VerifaiConfiguration {
         return VerifaiConfiguration(
             show_instruction_screens = true,
-            enableVisualInspection = false,
-            require_document_copy = false,
-            //require_mrz_contents = true,
+            enableVisualInspection = true, //requires document_copy !!
+            require_document_copy = true,
+            require_mrz_contents = true,
             read_mrz_contents = true,
             require_nfc_when_available = false,
             enable_post_cropping = false,

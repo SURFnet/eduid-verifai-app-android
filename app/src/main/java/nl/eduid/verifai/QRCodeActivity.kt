@@ -21,7 +21,6 @@ import java.util.concurrent.Executors
 import nl.eduid.verifai.databinding.ActivityQrcodeBinding // viewBinding magic!
 
 class QRCodeActivity : AppCompatActivity() {
-
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var barcodeBoxView: BarcodeBoxView
     private lateinit var binding: ActivityQrcodeBinding
@@ -42,7 +41,14 @@ class QRCodeActivity : AppCompatActivity() {
         checkCameraPermission()
     }
 
+    override fun onResume() {
+        Log.d("QRCodeActivity","onResume")
+        super.onResume()
+        startCamera()
+    }
+
     override fun onDestroy() {
+        Log.d("QRCodeActivity","onDestroy")
         super.onDestroy()
         cameraExecutor.shutdown()
     }
@@ -80,7 +86,7 @@ class QRCodeActivity : AppCompatActivity() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             // Permission granted: start the preview
-            startCamera()
+            //startCamera()
         } else {
             // Permission denied
             MaterialAlertDialogBuilder(this)
