@@ -10,6 +10,8 @@ import com.google.mlkit.vision.common.InputImage
 import android.graphics.Rect
 import android.graphics.RectF
 import android.util.Log
+import androidx.camera.lifecycle.ProcessCameraProvider
+import com.google.common.util.concurrent.ListenableFuture
 
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -18,6 +20,7 @@ import com.verifai.core.result.VerifaiResult
 
 class QRCodeAnalyzer (
     private val context: Context,
+    private val provider: ProcessCameraProvider,
     private val barcodeBoxView: BarcodeBoxView,
     private val previewViewWidth: Float,
     private val previewViewHeight: Float
@@ -58,28 +61,31 @@ class QRCodeAnalyzer (
 
         scanner.process(inputImage)
             .addOnSuccessListener { barcodes ->
+                image.close()
                 if (barcodes.isNotEmpty()) {
-                    for (barcode in barcodes) {
-                        // Update bounding rect
-                        barcode.boundingBox?.let { rect ->
-                            barcodeBoxView.setRect(
-                                adjustBoundingRect(
-                                    rect
-                                )
+                    val barcode = barcodes[0]
+                    // Update bounding rect
+                    barcode.boundingBox?.let { rect ->
+                        barcodeBoxView.setRect(
+                            adjustBoundingRect(
+                                rect
                             )
-                        }
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(barcode.rawValue))
-                        context.startActivity(intent)
+                        )
                     }
+                    provider.unbindAll()
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(barcode.rawValue))
+                    context.startActivity(intent)
                 } else {
                     // Remove bounding rect
                     barcodeBoxView.setRect(RectF())
                 }
-                image.close()
             }
             .addOnFailureListener { e ->
-                image.close()
                 Log.d(QRCodeAnalyzer.TAG, "Failure!! " + e)
+            }
+            .addOnCompleteListener {
+                image.close()
+                Log.d(QRCodeAnalyzer.TAG, "Complete!!")
             }
     }
 

@@ -42,6 +42,7 @@ class VerifaiResultActivity : AppCompatActivity() {
 
                 binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
 
+                msg.uid = result.mrzData?.documentNumber
                 msg.gn = result.mrzData?.firstName
                 msg.sn = result.mrzData?.lastName
                 msg.dob = result.mrzData?.dateOfBirth.toString()
@@ -50,7 +51,7 @@ class VerifaiResultActivity : AppCompatActivity() {
 
 //                msg.state = "finished" // So we can continue without liveness
                 msg.state = "nfc_ok"
-                msg.uid = msg.gn  // What should uid be set to?
+
                 //msg.svs = "SUCCESS" // This is too early, for debugging
                 server.sendMessage(msg)
             }

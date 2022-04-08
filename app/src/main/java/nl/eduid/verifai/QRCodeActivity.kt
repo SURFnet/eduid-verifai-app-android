@@ -1,7 +1,9 @@
 package nl.eduid.verifai
 
 import android.Manifest
+import android.util.Log
 import android.content.pm.PackageManager
+import android.graphics.RectF
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
@@ -25,6 +27,7 @@ class QRCodeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQrcodeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("QRCodeActivity","onCreate")
         super.onCreate(savedInstanceState)
         binding = ActivityQrcodeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -100,6 +103,8 @@ class QRCodeActivity : AppCompatActivity() {
      * This function is responsible for the setup of the camera preview and the image analyzer.
      */
     private fun startCamera() {
+        Log.d("QRCodeActivity","startCamera")
+
         val cameraProviderFuture = ProcessCameraProvider
             .getInstance(this)
 
@@ -109,7 +114,6 @@ class QRCodeActivity : AppCompatActivity() {
 
             // Preview
             val preview = Preview.Builder()
-                //.setTargetResolution(Size(960,1280))
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .build()
                 .also {
@@ -120,13 +124,13 @@ class QRCodeActivity : AppCompatActivity() {
             val imageAnalyzer = ImageAnalysis.Builder()
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .setTargetAspectRatio(AspectRatio.RATIO_4_3)
-                //.setTargetResolution(Size(960,1280))
                 .build()
             imageAnalyzer
                 .setAnalyzer(
                     cameraExecutor,
                     QRCodeAnalyzer(
                         this,
+                        cameraProvider,
                         barcodeBoxView,
                         binding.qrPreview.width.toFloat(),
                         binding.qrPreview.height.toFloat()
