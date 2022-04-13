@@ -11,7 +11,6 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.Serializable
-//import kotlinx.android.parcel.Parcelize
 import kotlinx.parcelize.Parcelize
 
 import com.verifai.core.Verifai
@@ -21,36 +20,38 @@ import com.verifai.core.listeners.VerifaiResultListener
 import com.verifai.core.result.VerifaiResult
 
 import nl.eduid.verifai.databinding.ActivityMainBinding
-import java.util.Date
 
 
 @Serializable
 class Message(var state: String? = null) {
     var id: String? = null
     var uid: String? = null
-    var cn: String? = null
+    //var cn: String? = null
     var gn: String? = null
     var sn: String? = null
     var dob: String? = null
-    var svs: String? = null
+    var nfc: Byte? = 0
+    var alive: Byte? = 0
+    var cfd: Float? = 0.0f
+    var result: String? = null
 }
 
 @Parcelize
 class Server(
     private val id: String,
-    private val db: String
+    private val cb: String
 ) : Parcelable {
     fun sendMessage(data: Message) {
         data.id = id
         val msg = Json.encodeToString(Message.serializer(), data)
-        Fuel.post(db.toString())
+        Fuel.post(cb)
             .jsonBody(msg)
             .response { request, response, result ->
                 val (bytes, error) = result
                 Log.d("Verifai server", "Request: $request")
                 Log.d("Verifai server", "Response: $response")
-                Log.d("Verifai server", "Result: ${bytes?.let { String(it) }}")
-                Log.d("Verifai server", "Error: $error")
+                if (error != null) Log.d("Verifai server", "Error: $error")
+                //Log.d("Verifai server", "Result: ${bytes?.let { String(it) }}")
             }
 
     }
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         msg = Message()
 
         // Handle app links.
-        Log.d(TAG, "intent: " + intent.toString())
+        Log.d(TAG, "intent: $intent")
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
             val appLinkData = appLinkIntent.data!!
@@ -116,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         Verifai.startScan(this@MainActivity, object : VerifaiResultListener {
             override fun onSuccess(result: VerifaiResult) {
                 Log.d(TAG, "Success")
-                Log.d(TAG, "result: " + result.toString())
+                Log.d(TAG, "result: $result")
                 if (result.mrzData != null) {
                     verifaiResult = result
                     Log.d(TAG,"result.document != null" + result.mrzData)
@@ -135,7 +136,7 @@ class MainActivity : AppCompatActivity() {
             override fun onCanceled() {
                 Log.d(TAG, "Cancel")
                 val msg = Message("canceled")
-                msg.svs = "FAILED"
+                msg.result = "FAILED"
                 server.sendMessage(msg)
             }
             override fun onError(e: Throwable) {
@@ -157,17 +158,17 @@ class MainActivity : AppCompatActivity() {
     private fun getVerifaiConfiguration(): VerifaiConfiguration {
         return VerifaiConfiguration(
             show_instruction_screens = true,
-            enableVisualInspection = true, //requires document_copy !!
             require_document_copy = true,
             require_mrz_contents = true,
             read_mrz_contents = true,
             require_nfc_when_available = false,
             enable_post_cropping = false,
+            enableVisualInspection = true, //requires document_copy !!
         )
     }
 
     companion object {
-        private const val TAG = "Verifai"
+        private const val TAG = "Verifai main"
         var verifaiResult: VerifaiResult? = null
     }
 

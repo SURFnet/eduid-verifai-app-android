@@ -1,6 +1,7 @@
 package nl.eduid.verifai
 
 import android.content.Intent
+import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -8,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.verifai.liveness.LivenessCheckStatus
 import com.verifai.liveness.VerifaiLiveness
 import com.verifai.liveness.VerifaiLivenessCheckListener
-import com.verifai.liveness.checks.CloseEyes
 import com.verifai.liveness.checks.FaceMatching
 import com.verifai.liveness.checks.Tilt
 import com.verifai.liveness.result.VerifaiFaceMatchingCheckResult
@@ -16,8 +16,8 @@ import com.verifai.liveness.result.VerifaiLivenessCheckResults
 import com.verifai.nfc.VerifaiNfc
 import com.verifai.nfc.VerifaiNfcResultListener
 import com.verifai.nfc.result.VerifaiNfcResult
-
 import nl.eduid.verifai.databinding.ActivityVerifaiResultBinding
+
 
 class VerifaiResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVerifaiResultBinding
@@ -36,9 +36,40 @@ class VerifaiResultActivity : AppCompatActivity() {
         setContentView(view)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val livenessCheckListener = object : VerifaiLivenessCheckListener {
+            override fun onResult(results: VerifaiLivenessCheckResults) {
+                Log.d(TAG, "Done")
+                var alive: Byte = 1
+                for (result in results.resultList) {
+                    if (result.status != LivenessCheckStatus.SUCCESS) alive = 0
+                    Log.d(TAG, "%s finished".format(result.check.instruction))
+                    Log.d(TAG, "%s status".format(result.status))
+                    if (result is VerifaiFaceMatchingCheckResult) {
+                        Log.d(TAG, "Face match?: ${result.match}")
+                        result.confidence?.let {
+                            Log.d(TAG, "Face match confidence ${(it * 100).toInt()}%")
+                            msg.cfd = result.confidence
+                        }
+                    }
+                }
+                msg.alive = alive
+                msg.state = "finished"
+                msg.result = "SUCCESS"
+                server.sendMessage(msg)
+
+            }
+
+            override fun onError(e: Throwable) {
+                e.printStackTrace()
+
+                msg.state = "liveness fail"
+                server.sendMessage(msg)
+            }
+        }
+
         val nfcListener = object : VerifaiNfcResultListener {
             override fun onResult(result: VerifaiNfcResult) {
-                Log.d(TAG, "NFC completed" + result.mrzData.toString())
+                Log.d(TAG, "NFC completed:\n" + result.mrzData.toString())
 
                 binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
 
@@ -50,10 +81,35 @@ class VerifaiResultActivity : AppCompatActivity() {
                 binding.contentResult.lastNameValue.text = msg.sn
 
 //                msg.state = "finished" // So we can continue without liveness
-                msg.state = "nfc_ok"
+                if (result.originality() && result.authenticity() && result.confidentiality()) {
+                    Log.d(TAG, "NFC VALID")
+                    msg.nfc=1
+                } else {
+                    Log.d(TAG, "NFC INVALID")
+                }
+                msg.state = "start_liveness_nfc"
 
                 //msg.svs = "SUCCESS" // This is too early, for debugging
                 server.sendMessage(msg)
+
+                if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
+                    Log.d(TAG, "Start Liveness NFC")
+                    // Liveness check is supported
+                    VerifaiLiveness.clear(this@VerifaiResultActivity)
+                        VerifaiLiveness.start(
+                            this@VerifaiResultActivity,
+                            arrayListOf(
+                                //CloseEyes(this),
+                                Tilt(this@VerifaiResultActivity, -25),
+                                //FaceMatching(this@VerifaiResultActivity, MainActivity.verifaiResult?.frontImage!!),
+                                FaceMatching(this@VerifaiResultActivity, result.photo!!),
+                            ), livenessCheckListener
+                        )
+                } else {
+                    // Sorry, the Liveness check is not supported by this device
+                    Log.d(TAG, "Liveness not supported")
+                }
+
             }
 
             override fun onCanceled() {
@@ -66,42 +122,13 @@ class VerifaiResultActivity : AppCompatActivity() {
             }
         }
 
-        val livenessCheckListener = object : VerifaiLivenessCheckListener {
-            override fun onResult(results: VerifaiLivenessCheckResults) {
-                var success: Boolean = true
-                Log.d(TAG, "Done")
-                for (result in results.resultList) {
-                    if (result.status != LivenessCheckStatus.SUCCESS) success = false
-                    Log.d(TAG, "%s finished".format(result.check.instruction))
-                    Log.d(TAG, "%s status".format(result.status))
-                    if (result is VerifaiFaceMatchingCheckResult) {
-                        Log.d(TAG, "Face match?: ${result.match}")
-                        result.confidence?.let {
-                            Log.d(TAG, "Face match confidence ${(it * 100).toInt()}%")
-                        }
-                    }
-                }
-                if (success) {
-                    msg.state = "finished"
-                    msg.svs = "SUCCESS"
-                    server.sendMessage(msg)
-                }
 
-            }
-
-            override fun onError(e: Throwable) {
-                e.printStackTrace()
-
-                msg.state = "liveness fail"
-                server.sendMessage(msg)
-            }
-        }
 
         /**
          * Start the NFC process based on the scan result.
          */
         binding.contentResult.startNfcButton.setOnClickListener {
-            Log.d("Verifai", "Nfc Start")
+            Log.d(TAG, "Nfc Start")
             msg.state = "start_nfc"
             server.sendMessage(msg)
             MainActivity.verifaiResult?.let {
@@ -119,9 +146,9 @@ class VerifaiResultActivity : AppCompatActivity() {
             VerifaiLiveness.clear(this)
             VerifaiLiveness.start(this,
                 arrayListOf(
-                    CloseEyes(this),
-                    //FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
-                    //Tilt(this, -25)
+                    //CloseEyes(this),
+                    Tilt(this, -25),
+                    FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
                 ), livenessCheckListener
             )
         }
@@ -130,14 +157,52 @@ class VerifaiResultActivity : AppCompatActivity() {
         //msg.dob = MainActivity.verifaiResult?.mrzData?.dateOfBirth.toString()
         //msg.gn = MainActivity.verifaiResult?.mrzData?.firstName.toString()
         //msg.sn = MainActivity.verifaiResult?.mrzData?.lastName.toString()
-/*
-        MainActivity.verifaiResult?.let {
-            msg.state = "start_nfc"
-            server.sendMessage(msg)
 
-            VerifaiNfc.start(this, it, true, nfcListener, true)
+        MainActivity.verifaiResult?.let {
+            msg.uid = it.mrzData?.documentNumber
+            msg.gn = it.mrzData?.firstName
+            msg.sn = it.mrzData?.lastName
+            msg.dob = it.mrzData?.dateOfBirth.toString()
+            msg.nfc = 0
+
+            val nfcAdapter = NfcAdapter.getDefaultAdapter(this)
+
+            if (nfcAdapter != null &&
+                nfcAdapter.isEnabled &&
+                VerifaiNfc.isCapable(this) &&
+                it.document?.nfcType != null &&
+                it.mrzData?.isNfcKeyValid == true) {
+                Log.d(TAG, "Document is NFC capable")
+                Log.d(TAG, "Device is NFC capable, it's enabled and the document supports NFC")
+
+                msg.state = "start_nfc"
+                server.sendMessage(msg)
+
+                VerifaiNfc.start(this, it, true, nfcListener, true)
+            } else {
+                Log.d(TAG, "Start Liveness VIZ")
+                msg.state = "start_liveness_viz"
+                server.sendMessage(msg)
+
+                if (VerifaiLiveness.isLivenessCheckSupported(this)) {
+                    // Liveness check is supported
+                    VerifaiLiveness.clear(this)
+                    VerifaiLiveness.start(this,
+                        arrayListOf(
+                            //CloseEyes(this),
+                            Tilt(this, -25),
+                            FaceMatching(this, it.frontImage!!),
+                        ), livenessCheckListener
+                    )
+                } else {
+                    // Sorry, the Liveness check is not supported by this device
+                    Log.d(TAG, "Liveness not supported")
+                }
+
+            }
+
         }
-*/
+
         MainActivity.verifaiResult?.visualInspectionZoneResult.also { map ->
             binding.vizDetailsBtn.setOnClickListener {
                 val intent = Intent(this, GeneralResultActivity::class.java)
