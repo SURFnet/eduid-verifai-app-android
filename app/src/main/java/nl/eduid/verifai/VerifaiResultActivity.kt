@@ -167,8 +167,7 @@ class VerifaiResultActivity : AppCompatActivity() {
 
             val nfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
-            if (nfcAdapter != null &&
-                nfcAdapter.isEnabled &&
+            if (nfcAdapter?.isEnabled == true &&
                 VerifaiNfc.isCapable(this) &&
                 it.document?.nfcType != null &&
                 it.mrzData?.isNfcKeyValid == true) {
