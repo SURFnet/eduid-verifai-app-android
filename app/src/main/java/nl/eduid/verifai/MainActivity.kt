@@ -26,11 +26,11 @@ import nl.eduid.verifai.databinding.ActivityMainBinding
 class Message(var state: String? = null) {
     var id: String? = null
     var uid: String? = null
-    //var cn: String? = null
     var gn: String? = null
     var sn: String? = null
     var dob: String? = null
     var nfc: Byte? = 0
+    var valid: Byte? = 0
     var alive: Byte? = 0
     var cfd: Float? = 0.0f
     var result: String? = null
@@ -51,7 +51,7 @@ class Server(
                 Log.d("Verifai server", "Request: $request")
                 Log.d("Verifai server", "Response: $response")
                 if (error != null) Log.d("Verifai server", "Error: $error")
-                //Log.d("Verifai server", "Result: ${bytes?.let { String(it) }}")
+                Log.d("Verifai server", "Result: ${bytes?.let { String(it) }}")
             }
 
     }
@@ -83,6 +83,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "intent: $intent")
         val appLinkIntent = intent
         if (appLinkIntent.action === Intent.ACTION_VIEW) {
+            Log.d(TAG, "Start Verifai intent")
+
             val appLinkData = appLinkIntent.data!!
             val cb = appLinkData.getQueryParameter("cb")
             val id = appLinkData.getQueryParameter("id")

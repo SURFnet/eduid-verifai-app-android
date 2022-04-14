@@ -12,7 +12,6 @@
     <application
         android:usesCleartextTraffic="true"
         android:installLocation="auto"
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -37,17 +36,6 @@
 
                 <data
                     android:scheme="https"
-                    android:host="*.eduid.nl"
-                    android:path="/verifai" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:scheme="verifai"
                     android:host="*.eduid.nl"
                     android:path="/verifai" />
             </intent-filter>

@@ -71,25 +71,20 @@ class VerifaiResultActivity : AppCompatActivity() {
             override fun onResult(result: VerifaiNfcResult) {
                 Log.d(TAG, "NFC completed:\n" + result.mrzData.toString())
 
-                binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
-
+                msg.nfc = 1
                 msg.uid = result.mrzData?.documentNumber
                 msg.gn = result.mrzData?.firstName
                 msg.sn = result.mrzData?.lastName
                 msg.dob = result.mrzData?.dateOfBirth.toString()
-                binding.contentResult.firstNameValue.text = msg.gn
-                binding.contentResult.lastNameValue.text = msg.sn
 
-//                msg.state = "finished" // So we can continue without liveness
                 if (result.originality() && result.authenticity() && result.confidentiality()) {
                     Log.d(TAG, "NFC VALID")
-                    msg.nfc=1
+                    msg.valid=1
                 } else {
                     Log.d(TAG, "NFC INVALID")
                 }
-                msg.state = "start_liveness_nfc"
 
-                //msg.svs = "SUCCESS" // This is too early, for debugging
+                msg.state = "start_liveness_nfc"
                 server.sendMessage(msg)
 
                 if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
@@ -122,48 +117,13 @@ class VerifaiResultActivity : AppCompatActivity() {
             }
         }
 
-
-
-        /**
-         * Start the NFC process based on the scan result.
-         */
-        binding.contentResult.startNfcButton.setOnClickListener {
-            Log.d(TAG, "Nfc Start")
-            msg.state = "start_nfc"
-            server.sendMessage(msg)
-            MainActivity.verifaiResult?.let {
-                VerifaiNfc.start(this, it, true, nfcListener, true)
-            }
-        }
-
-        /**
-         * Start the Liveness Check. A scan result is only needed for the face match. Without the
-         * face match the liveness check can also run separately.
-         */
-        binding.contentResult.startLivenessButton.setOnClickListener {
-            msg.state = "start_liveness"
-            server.sendMessage(msg)
-            VerifaiLiveness.clear(this)
-            VerifaiLiveness.start(this,
-                arrayListOf(
-                    //CloseEyes(this),
-                    Tilt(this, -25),
-                    FaceMatching(this, MainActivity.verifaiResult?.frontImage!!),
-                ), livenessCheckListener
-            )
-        }
-
-        //binding.contentResult.mrzValue.text = MainActivity.verifaiResult?.mrzData?.mrzString
-        //msg.dob = MainActivity.verifaiResult?.mrzData?.dateOfBirth.toString()
-        //msg.gn = MainActivity.verifaiResult?.mrzData?.firstName.toString()
-        //msg.sn = MainActivity.verifaiResult?.mrzData?.lastName.toString()
-
         MainActivity.verifaiResult?.let {
             msg.uid = it.mrzData?.documentNumber
             msg.gn = it.mrzData?.firstName
             msg.sn = it.mrzData?.lastName
             msg.dob = it.mrzData?.dateOfBirth.toString()
             msg.nfc = 0
+            msg.valid = 0
 
             val nfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
