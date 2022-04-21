@@ -109,6 +109,28 @@ class VerifaiResultActivity : AppCompatActivity() {
 
             override fun onCanceled() {
                 Log.d(TAG, "NFC Cancel")
+                // TODO deduplicate this from no-NFC case!!
+                MainActivity.verifaiResult?.let {
+                    Log.d(TAG, "Start Liveness VIZ")
+                    msg.state = "start_liveness_viz"
+                    server.sendMessage(msg)
+
+                    if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
+                        // Liveness check is supported
+                        VerifaiLiveness.clear(this@VerifaiResultActivity)
+                        VerifaiLiveness.start(
+                            this@VerifaiResultActivity,
+                            arrayListOf(
+                                //CloseEyes(this),
+                                Tilt(this@VerifaiResultActivity, -25),
+                                FaceMatching(this@VerifaiResultActivity, it.frontImage!!),
+                            ), livenessCheckListener
+                        )
+                    } else {
+                        // Sorry, the Liveness check is not supported by this device
+                        Log.d(TAG, "Liveness not supported")
+                    }
+                }
             }
 
             override fun onError(e: Throwable) {
