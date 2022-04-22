@@ -79,7 +79,7 @@ class VerifaiResultActivity : AppCompatActivity() {
                     result.confidentiality()) {
                     Log.d(TAG, "NFC VALID")
                     msg.valid=1
-                    msg.uid = result.mrzData?.documentNumber
+                    msg.number = result.mrzData?.documentNumber
                     msg.gn = result.mrzData?.firstName
                     msg.sn = result.mrzData?.lastName
                     msg.dob = result.mrzData?.dateOfBirth.toString()
@@ -146,7 +146,7 @@ class VerifaiResultActivity : AppCompatActivity() {
 
         MainActivity.verifaiResult?.let {
             Log.d(TAG, "verifaiResult mrzData:" + it.mrzData.toString())
-            msg.uid = it.mrzData?.documentNumber
+            msg.number = it.mrzData?.documentNumber
             msg.gn = it.mrzData?.firstName
             msg.sn = it.mrzData?.lastName
             msg.dob = it.mrzData?.dateOfBirth.toString()

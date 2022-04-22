@@ -25,7 +25,7 @@ import nl.eduid.verifai.databinding.ActivityMainBinding
 @Serializable
 class Message(var state: String? = null) {
     var id: String? = null
-    var uid: String? = null
+    var number: String? = null
     var gn: String? = null
     var sn: String? = null
     var dob: String? = null
