@@ -72,14 +72,19 @@ class VerifaiResultActivity : AppCompatActivity() {
                 Log.d(TAG, "NFC completed:\n" + result.mrzData.toString())
 
                 msg.nfc = 1
-                msg.uid = result.mrzData?.documentNumber
-                msg.gn = result.mrzData?.firstName
-                msg.sn = result.mrzData?.lastName
-                msg.dob = result.mrzData?.dateOfBirth.toString()
 
-                if (result.originality() && result.authenticity() && result.confidentiality()) {
+                if (result.mrzData != null && // This is weird, NFC may check valid but not contain mrzData!?
+                    result.originality() &&
+                    result.authenticity() &&
+                    result.confidentiality()) {
                     Log.d(TAG, "NFC VALID")
                     msg.valid=1
+                    msg.uid = result.mrzData?.documentNumber
+                    msg.gn = result.mrzData?.firstName
+                    msg.sn = result.mrzData?.lastName
+                    msg.dob = result.mrzData?.dateOfBirth.toString()
+                    msg.doctype = result.mrzData?.documentType
+                    msg.country = result.mrzData?.countryCode
                 } else {
                     Log.d(TAG, "NFC INVALID")
                 }
@@ -140,10 +145,13 @@ class VerifaiResultActivity : AppCompatActivity() {
         }
 
         MainActivity.verifaiResult?.let {
+            Log.d(TAG, "verifaiResult mrzData:" + it.mrzData.toString())
             msg.uid = it.mrzData?.documentNumber
             msg.gn = it.mrzData?.firstName
             msg.sn = it.mrzData?.lastName
             msg.dob = it.mrzData?.dateOfBirth.toString()
+            msg.doctype = it.mrzData?.documentType
+            msg.country = it.mrzData?.countryCode
             msg.nfc = 0
             msg.valid = 0
 
