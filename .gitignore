@@ -20,3 +20,4 @@
 .idea/gradle.xml
 .idea/compiler.xml
 keystore.jks
+app/release/app-release.apk
