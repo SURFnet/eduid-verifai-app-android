@@ -19,6 +19,8 @@ jobs:
     - name: Copy dist file
       run: |
         cp gradle.properties.dist gradle.properties
+    - name: Install gradle wrapper
+      run: gradle wrapper
     - name: Execute Gradle build
       run: ./gradlew build
     - name: Build APK
