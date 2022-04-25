@@ -1,6 +1,7 @@
 package nl.eduid.verifai
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.util.Log
@@ -26,7 +27,7 @@ class VerifaiResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        server = intent.getParcelableExtra<Server>("SERVER")!!
+        server = intent.getParcelableExtra("SERVER")!!
 
         msg = Message()
 
@@ -61,9 +62,27 @@ class VerifaiResultActivity : AppCompatActivity() {
 
             override fun onError(e: Throwable) {
                 e.printStackTrace()
-
                 msg.state = "liveness fail"
                 server.sendMessage(msg)
+            }
+        }
+
+        fun checkLiveness(photo: Bitmap){
+            if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
+                Log.d(TAG, "Start Liveness NFC")
+                // Liveness check is supported
+                VerifaiLiveness.clear(this@VerifaiResultActivity)
+                VerifaiLiveness.start(
+                    this@VerifaiResultActivity,
+                    arrayListOf(
+                        //CloseEyes(this),
+                        Tilt(this@VerifaiResultActivity, -25),
+                        FaceMatching(this@VerifaiResultActivity, photo),
+                    ), livenessCheckListener
+                )
+            } else {
+                // Sorry, the Liveness check is not supported by this device
+                Log.d(TAG, "Liveness not supported")
             }
         }
 
@@ -92,24 +111,7 @@ class VerifaiResultActivity : AppCompatActivity() {
                 msg.state = "start_liveness_nfc"
                 server.sendMessage(msg)
 
-                if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
-                    Log.d(TAG, "Start Liveness NFC")
-                    // Liveness check is supported
-                    VerifaiLiveness.clear(this@VerifaiResultActivity)
-                        VerifaiLiveness.start(
-                            this@VerifaiResultActivity,
-                            arrayListOf(
-                                //CloseEyes(this),
-                                Tilt(this@VerifaiResultActivity, -25),
-                                //FaceMatching(this@VerifaiResultActivity, MainActivity.verifaiResult?.frontImage!!),
-                                FaceMatching(this@VerifaiResultActivity, result.photo!!),
-                            ), livenessCheckListener
-                        )
-                } else {
-                    // Sorry, the Liveness check is not supported by this device
-                    Log.d(TAG, "Liveness not supported")
-                }
-
+                checkLiveness(result.photo!!)
             }
 
             override fun onCanceled() {
@@ -120,21 +122,7 @@ class VerifaiResultActivity : AppCompatActivity() {
                     msg.state = "start_liveness_viz"
                     server.sendMessage(msg)
 
-                    if (VerifaiLiveness.isLivenessCheckSupported(this@VerifaiResultActivity)) {
-                        // Liveness check is supported
-                        VerifaiLiveness.clear(this@VerifaiResultActivity)
-                        VerifaiLiveness.start(
-                            this@VerifaiResultActivity,
-                            arrayListOf(
-                                //CloseEyes(this),
-                                Tilt(this@VerifaiResultActivity, -25),
-                                FaceMatching(this@VerifaiResultActivity, it.frontImage!!),
-                            ), livenessCheckListener
-                        )
-                    } else {
-                        // Sorry, the Liveness check is not supported by this device
-                        Log.d(TAG, "Liveness not supported")
-                    }
+                    checkLiveness(it.frontImage!!)
                 }
             }
 
@@ -173,22 +161,8 @@ class VerifaiResultActivity : AppCompatActivity() {
                 msg.state = "start_liveness_viz"
                 server.sendMessage(msg)
 
-                if (VerifaiLiveness.isLivenessCheckSupported(this)) {
-                    // Liveness check is supported
-                    VerifaiLiveness.clear(this)
-                    VerifaiLiveness.start(this,
-                        arrayListOf(
-                            //CloseEyes(this),
-                            Tilt(this, -25),
-                            FaceMatching(this, it.frontImage!!),
-                        ), livenessCheckListener
-                    )
-                } else {
-                    // Sorry, the Liveness check is not supported by this device
-                    Log.d(TAG, "Liveness not supported")
-                }
-
-            }
+                checkLiveness(it.frontImage!!)
+           }
 
         }
 
