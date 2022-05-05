@@ -19,5 +19,5 @@ android.useAndroidX=true
 # Automatically convert third-party libraries to use AndroidX
 android.enableJetifier=false
 
-verifaiLicence="=== Verifai Licence file V2 ===\\n" +\
-""
+#verifaiLicence="=== Verifai Licence file V2 ===\\n" +\
+#""
