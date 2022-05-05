@@ -21,6 +21,12 @@ jobs:
     - name: Copy dist file
       run: |
         cp gradle.properties.dist gradle.properties
+    - name: Add verifai licence to gradle.properties
+      shell: bash
+      env:
+          VERIFAI_LICENCE: ${{ secrets.VERIFAI_LICENCE }}
+      run: |
+        echo "$VERIFAI_LICENCE" >> gradle.properties
     - name: Install gradle wrapper
       run: gradle wrapper
     - name: Execute Gradle build
@@ -41,15 +47,15 @@ jobs:
       - name: Download APK from build
         uses: actions/download-artifact@v1
         with:
-          name: apk  
+          name: apk
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }} 
+          release_name: Release ${{ github.ref }}
       - name: Upload Release APK
         id: upload_release_asset
         uses: actions/upload-release-asset@v1.0.1
