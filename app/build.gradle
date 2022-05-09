@@ -5,6 +5,34 @@ plugins{
     id("kotlin-parcelize")
 }
 
+def getVersionCode = { ->
+    try {
+        def code = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'tag', '--list'
+            standardOutput = code
+        }
+        return code.toString().split("\n").size()
+    }
+    catch (ignored) {
+        return -1;
+    }
+}
+
+def getVersionName = { ->
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'describe', '--tags'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+    catch (ignored) {
+        return null;
+    }
+}
+
 android {
     compileSdk 31
 
@@ -27,8 +55,8 @@ android {
         applicationId "nl.eduid.verifai"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 3
-        versionName "4.8.0"
+        versionCode getVersionCode()
+        versionName getVersionName()
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         buildConfigField "String", "verifaiLicence", verifaiLicence

@@ -1,26 +1,26 @@
 package nl.eduid.verifai
 
-import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.Log
 import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
-
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.Serializable
-import kotlinx.parcelize.Parcelize
-
 import com.verifai.core.Verifai
 import com.verifai.core.VerifaiConfiguration
 import com.verifai.core.exceptions.LicenceNotValidException
 import com.verifai.core.listeners.VerifaiResultListener
 import com.verifai.core.result.VerifaiResult
-
+import kotlinx.parcelize.Parcelize
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 import nl.eduid.verifai.databinding.ActivityMainBinding
 
+var versionCode = BuildConfig.VERSION_CODE
+var versionName = BuildConfig.VERSION_NAME
 
 @Serializable
 class Message(var state: String? = null) {
@@ -80,6 +80,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         msg = Message()
+        val versionView : TextView = findViewById(R.id.version) as TextView
+        versionView.text= versionName
 
         // Handle app links.
         Log.d(TAG, "intent: $intent")
