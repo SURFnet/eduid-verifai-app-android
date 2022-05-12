@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.verifai.liveness.LivenessCheckStatus
 import com.verifai.liveness.VerifaiLiveness
 import com.verifai.liveness.VerifaiLivenessCheckListener
+import com.verifai.liveness.checks.CloseEyes
 import com.verifai.liveness.checks.FaceMatching
 import com.verifai.liveness.checks.Tilt
 import com.verifai.liveness.result.VerifaiFaceMatchingCheckResult
@@ -75,8 +76,8 @@ class VerifaiResultActivity : AppCompatActivity() {
                 VerifaiLiveness.start(
                     this@VerifaiResultActivity,
                     arrayListOf(
-                        //CloseEyes(this),
-                        Tilt(this@VerifaiResultActivity, -25),
+                        CloseEyes(this),
+                        //Tilt(this@VerifaiResultActivity, -25),
                         FaceMatching(this@VerifaiResultActivity, photo),
                     ), livenessCheckListener
                 )
