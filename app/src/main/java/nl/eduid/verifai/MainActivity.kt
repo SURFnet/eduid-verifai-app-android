@@ -168,7 +168,7 @@ class MainActivity : AppCompatActivity() {
             require_mrz_contents = true,
             read_mrz_contents = true,
             require_nfc_when_available = false,
-            enable_post_cropping = false,
+            enable_post_cropping = true,
             enableVisualInspection = true, //requires document_copy !!
         )
     }
