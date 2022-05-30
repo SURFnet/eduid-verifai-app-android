@@ -28,9 +28,9 @@ jobs:
       run: gradle wrapper
     - name: Execute Gradle build
       run: ./gradlew build
+
     - name: Build APK
       run: bash ./gradlew assembleRelease
-
     - name: Sign APK
       id: sign_apk
       uses: r0adkll/sign-android-release@v1
@@ -40,6 +40,19 @@ jobs:
         alias: ${{ secrets.ALIAS }}
         keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
         keyPassword: ${{ secrets.KEYPASSWORD }}
+
+    - name: Build App bundle
+      run: bash ./gradlew bundle
+    - name: Sign App Bundle
+      id: sign_aab
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: app/build/outputs/bundle/release
+        signingKeyBase64: ${{ secrets.SIGNINGKEYBASE64 }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
+        keyPassword: ${{ secrets.KEYPASSWORD }}
+
 
     - name: Build Changelog
       id: changelog
@@ -66,4 +79,13 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ${{steps.sign_apk.outputs.signedReleaseFile}}
         asset_name: eduIDverifai-${{ github.ref_name }}.apk
+        asset_content_type: application/zip
+    - name: Upload App bundle
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ${{steps.sign_aab.outputs.signedReleaseFile}}
+        asset_name: eduIDverifai-${{ github.ref_name }}.aab
         asset_content_type: application/zip
